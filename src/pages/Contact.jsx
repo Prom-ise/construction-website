@@ -17,34 +17,72 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="container">
-        <div className="flex">
-          <input
-          class="bg-[#222630] px-4 py-3 outline-none w-[280px] text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]"
-          name="text"
-          placeholder="Your Name"
-          type="text"
-        /><input
-          class="bg-[#222630] px-4 py-3 outline-none w-[280px] text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]"
-          name="email"
-          placeholder="Your Email"
-          type="text"
+      <div className="container mx-auto px-[4em] my-[7em]">
+        <div className="flex flex-row justify-center items-center gap-x-4">
+          <div className="w-6/12">
+            <label htmlFor="name" className="block text-black mb-1">
+              NAME
+            </label>
+            <input
+              id="name"
+              className="bg-[#222630] w-full px-4 py-3 outline-none text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]"
+              name="name"
+              placeholder="Your Name"
+              type="text"
+            />
+          </div>
+
+          <div className=" w-6/12">
+            <label htmlFor="email" className="block text-black mb-1">
+              EMAIL
+            </label>
+            <input
+              id="email"
+              className="bg-[#222630] w-full px-4 py-3 outline-none text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]"
+              name="email"
+              placeholder="Your Email"
+              type="text"
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-row justify-center items-center gap-x-4 my-5">
+          <div className="w-6/12">
+            <label htmlFor="tel" className="block text-black mb-1">
+              CONTACT
+            </label>
+            <input
+            id="tel"
+            className="bg-[#222630] w-full px-4 py-3 outline-none text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]"
+            name="tel"
+            placeholder="Contact Number"
+            type="number"
+          />
+          </div>
+          
+          <div className="w-6/12">
+            <label htmlFor="text" className="block text-black mb-1">
+              SUBJECT
+            </label>
+            <input
+            className="bg-[#222630] px-4 py-3 outline-none w-full text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]"
+            name="text"
+            placeholder="Enter email or username"
+            type="text"
+          />
+          </div>
+          
+        </div>
+        <div>
+<label htmlFor="message" className="block text-black mb-1">MESSAGE</label>
+        <textarea
+        id="message"
+          className="bg-[#222630] px-4 py-3 outline-none w-full text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040] resize-none"
+          placeholder="Enter your message here..."
+          rows="7"
         />
         </div>
-        <div className="flex">
-          <input
-          class="bg-[#222630] px-4 py-3 outline-none w-[280px] text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]"
-          name="tel"
-          placeholder="Contact Number"
-          type="number"
-        />
-        <input
-          class="bg-[#222630] px-4 py-3 outline-none w-[280px] text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]"
-          name="text"
-          placeholder="Enter email or username"
-          type="text"
-        />
-        </div>
+      
       </div>
     </div>
   );
