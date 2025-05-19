@@ -1,11 +1,13 @@
 import React from "react";
 import construct7 from "../assets/construct7.jpg";
+import construct8 from "../assets/construct8.jpg";
+import { GiHouse } from "react-icons/gi";
 
 const Services = () => {
   return (
     <div>
       <div
-        className="w-full bg-cover p-[4em] bg-center bg-no-repeat relative"
+        className="w-full bg-cover px-[4em] py-[6em] bg-center bg-no-repeat relative"
         style={{ backgroundImage: `url(${construct7})` }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
@@ -30,8 +32,537 @@ const Services = () => {
 
       <div className="mx-auto">
         <h1 className="text-3xl mt-[2em] font-bold text-center text-[rgb(254,93,20)]">Featured Construction Services</h1>
-        <div>
-          
+        <div className="mt-[3em] mb-[8em]">
+        <div className="flex flex-row justify-center items-center gap-x-5 mx-5">
+    <div className="w-4/12 service-card">
+      <div className="service-content">
+        <div className="service-back">
+          <div className="service-back-content">
+            <div className="service-icon"><GiHouse /></div>
+            <strong>Building from scratch</strong>
+          </div>
+        </div>
+
+        <div className="service-front">
+          <div className="service-img">
+            <div className="service-circle"></div>
+            <div className="service-circle" id="right"></div>
+            <div className="service-circle" id="bottom"></div>
+          </div>
+
+          <div className="service-front-content" style={{ backgroundImage: `url(${construct8})` }}>
+            <small className="service-badge">Services</small>
+            <div className="service-description">
+              <div className="service-title">
+                <p className="service-title">
+                  <strong>Building from scratch</strong>
+                </p>
+                <svg
+                  fillRule="nonzero"
+                  height="15px"
+                  width="15px"
+                  viewBox="0 0 256 256"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    style={{ mixBlendMode: "normal" }}
+                    textAnchor="none"
+                    fontSize="none"
+                    fontWeight="none"
+                    fontFamily="none"
+                    strokeDashoffset="0"
+                    strokeDasharray=""
+                    strokeMiterlimit="10"
+                    strokeLinejoin="miter"
+                    strokeLinecap="butt"
+                    strokeWidth="1"
+                    stroke="none"
+                    fillRule="nonzero"
+                    fill="#20c997"
+                  >
+                    <g transform="scale(8,8)">
+                      <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p className="service-card-footer">Contact Us</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="w-4/12 service-card">
+      <div className="service-content">
+        <div className="service-back">
+          <div className="service-back-content">
+            <div className="service-icon"><GiHouse /></div>
+            <strong>Plan and Layout</strong>
+          </div>
+        </div>
+
+        <div className="service-front">
+          <div className="service-img">
+            <div className="service-circle"></div>
+            <div className="service-circle" id="right"></div>
+            <div className="service-circle" id="bottom"></div>
+          </div>
+
+          <div className="service-front-content">
+            <small className="service-badge">Services</small>
+            <div className="service-description">
+              <div className="service-title">
+                <p className="service-title">
+                  <strong>Plan and Layout</strong>
+                </p>
+                <svg
+                  fillRule="nonzero"
+                  height="15px"
+                  width="15px"
+                  viewBox="0 0 256 256"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    style={{ mixBlendMode: "normal" }}
+                    textAnchor="none"
+                    fontSize="none"
+                    fontWeight="none"
+                    fontFamily="none"
+                    strokeDashoffset="0"
+                    strokeDasharray=""
+                    strokeMiterlimit="10"
+                    strokeLinejoin="miter"
+                    strokeLinecap="butt"
+                    strokeWidth="1"
+                    stroke="none"
+                    fillRule="nonzero"
+                    fill="#20c997"
+                  >
+                    <g transform="scale(8,8)">
+                      <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p className="service-card-footer">Contact Us</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="w-4/12 service-card">
+      <div className="service-content">
+        <div className="service-back">
+          <div className="service-back-content">
+            <div className="service-icon"><GiHouse /></div>
+            <strong>Completing</strong>
+          </div>
+        </div>
+
+        <div className="service-front">
+          <div className="service-img">
+            <div className="service-circle"></div>
+            <div className="service-circle" id="right"></div>
+            <div className="service-circle" id="bottom"></div>
+          </div>
+
+          <div className="service-front-content">
+            <small className="service-badge">Services</small>
+            <div className="service-description">
+              <div className="service-title">
+                <p className="service-title">
+                  <strong>Completing</strong>
+                </p>
+                <svg
+                  fillRule="nonzero"
+                  height="15px"
+                  width="15px"
+                  viewBox="0 0 256 256"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    style={{ mixBlendMode: "normal" }}
+                    textAnchor="none"
+                    fontSize="none"
+                    fontWeight="none"
+                    fontFamily="none"
+                    strokeDashoffset="0"
+                    strokeDasharray=""
+                    strokeMiterlimit="10"
+                    strokeLinejoin="miter"
+                    strokeLinecap="butt"
+                    strokeWidth="1"
+                    stroke="none"
+                    fillRule="nonzero"
+                    fill="#20c997"
+                  >
+                    <g transform="scale(8,8)">
+                      <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p className="service-card-footer">Contact Us</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        </div>
+         <div className="flex flex-row justify-center items-center gap-x-5 my-[2em] mx-5">
+    <div className="w-4/12 service-card">
+      <div className="service-content">
+        <div className="service-back">
+          <div className="service-back-content">
+            <div className="service-icon"><GiHouse /></div>
+            <strong>Evaluation</strong>
+          </div>
+        </div>
+
+        <div className="service-front">
+          <div className="service-img">
+            <div className="service-circle"></div>
+            <div className="service-circle" id="right"></div>
+            <div className="service-circle" id="bottom"></div>
+          </div>
+
+          <div className="service-front-content">
+            <small className="service-badge">Services</small>
+            <div className="service-description">
+              <div className="service-title">
+                <p className="service-title">
+                  <strong>Evaluation</strong>
+                </p>
+                <svg
+                  fillRule="nonzero"
+                  height="15px"
+                  width="15px"
+                  viewBox="0 0 256 256"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    style={{ mixBlendMode: "normal" }}
+                    textAnchor="none"
+                    fontSize="none"
+                    fontWeight="none"
+                    fontFamily="none"
+                    strokeDashoffset="0"
+                    strokeDasharray=""
+                    strokeMiterlimit="10"
+                    strokeLinejoin="miter"
+                    strokeLinecap="butt"
+                    strokeWidth="1"
+                    stroke="none"
+                    fillRule="nonzero"
+                    fill="#20c997"
+                  >
+                    <g transform="scale(8,8)">
+                      <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p className="service-card-footer">Contact Us</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="w-4/12 service-card">
+      <div className="service-content">
+        <div className="service-back">
+          <div className="service-back-content">
+            <div className="service-icon"><GiHouse /></div>
+            <strong>Drainage</strong>
+          </div>
+        </div>
+
+        <div className="service-front">
+          <div className="service-img">
+            <div className="service-circle"></div>
+            <div className="service-circle" id="right"></div>
+            <div className="service-circle" id="bottom"></div>
+          </div>
+
+          <div className="service-front-content">
+            <small className="service-badge">Services</small>
+            <div className="service-description">
+              <div className="service-title">
+                <p className="service-title">
+                  <strong>Drainage</strong>
+                </p>
+                <svg
+                  fillRule="nonzero"
+                  height="15px"
+                  width="15px"
+                  viewBox="0 0 256 256"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    style={{ mixBlendMode: "normal" }}
+                    textAnchor="none"
+                    fontSize="none"
+                    fontWeight="none"
+                    fontFamily="none"
+                    strokeDashoffset="0"
+                    strokeDasharray=""
+                    strokeMiterlimit="10"
+                    strokeLinejoin="miter"
+                    strokeLinecap="butt"
+                    strokeWidth="1"
+                    stroke="none"
+                    fillRule="nonzero"
+                    fill="#20c997"
+                  >
+                    <g transform="scale(8,8)">
+                      <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p className="service-card-footer">Contact Us</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="w-4/12 service-card">
+      <div className="service-content">
+        <div className="service-back">
+          <div className="service-back-content">
+            <div className="service-icon"><GiHouse /></div>
+            <strong>Road</strong>
+          </div>
+        </div>
+
+        <div className="service-front">
+          <div className="service-img">
+            <div className="service-circle"></div>
+            <div className="service-circle" id="right"></div>
+            <div className="service-circle" id="bottom"></div>
+          </div>
+
+          <div className="service-front-content">
+            <small className="service-badge">Services</small>
+            <div className="service-description">
+              <div className="service-title">
+                <p className="service-title">
+                  <strong>Road</strong>
+                </p>
+                <svg
+                  fillRule="nonzero"
+                  height="15px"
+                  width="15px"
+                  viewBox="0 0 256 256"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    style={{ mixBlendMode: "normal" }}
+                    textAnchor="none"
+                    fontSize="none"
+                    fontWeight="none"
+                    fontFamily="none"
+                    strokeDashoffset="0"
+                    strokeDasharray=""
+                    strokeMiterlimit="10"
+                    strokeLinejoin="miter"
+                    strokeLinecap="butt"
+                    strokeWidth="1"
+                    stroke="none"
+                    fillRule="nonzero"
+                    fill="#20c997"
+                  >
+                    <g transform="scale(8,8)">
+                      <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p className="service-card-footer">Contact Us</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        </div>
+         <div className="flex flex-row justify-center items-center gap-x-5 mx-5">
+    <div className="w-4/12 service-card">
+      <div className="service-content">
+        <div className="service-back">
+          <div className="service-back-content">
+            <div className="service-icon"><GiHouse /></div>
+            <strong>Shops, malls,mart, complexes 
+</strong>
+          </div>
+        </div>
+
+        <div className="service-front">
+          <div className="service-img">
+            <div className="service-circle"></div>
+            <div className="service-circle" id="right"></div>
+            <div className="service-circle" id="bottom"></div>
+          </div>
+
+          <div className="service-front-content">
+            <small className="service-badge">Services</small>
+            <div className="service-description">
+              <div className="service-title">
+                <p className="service-title">
+                  <strong>Shops, malls,mart, complexes </strong>
+                </p>
+                <svg
+                  fillRule="nonzero"
+                  height="15px"
+                  width="15px"
+                  viewBox="0 0 256 256"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    style={{ mixBlendMode: "normal" }}
+                    textAnchor="none"
+                    fontSize="none"
+                    fontWeight="none"
+                    fontFamily="none"
+                    strokeDashoffset="0"
+                    strokeDasharray=""
+                    strokeMiterlimit="10"
+                    strokeLinejoin="miter"
+                    strokeLinecap="butt"
+                    strokeWidth="1"
+                    stroke="none"
+                    fillRule="nonzero"
+                    fill="#20c997"
+                  >
+                    <g transform="scale(8,8)">
+                      <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p className="service-card-footer">Contact Us</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="w-4/12 service-card">
+      <div className="service-content">
+        <div className="service-back">
+          <div className="service-back-content">
+            <div className="service-icon"><GiHouse /></div>
+            <strong>Bridges 
+</strong>
+          </div>
+        </div>
+
+        <div className="service-front">
+          <div className="service-img">
+            <div className="service-circle"></div>
+            <div className="service-circle" id="right"></div>
+            <div className="service-circle" id="bottom"></div>
+          </div>
+
+          <div className="service-front-content">
+            <small className="service-badge">Services</small>
+            <div className="service-description">
+              <div className="service-title">
+                <p className="service-title">
+                  <strong>Bridges</strong>
+                </p>
+                <svg
+                  fillRule="nonzero"
+                  height="15px"
+                  width="15px"
+                  viewBox="0 0 256 256"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    style={{ mixBlendMode: "normal" }}
+                    textAnchor="none"
+                    fontSize="none"
+                    fontWeight="none"
+                    fontFamily="none"
+                    strokeDashoffset="0"
+                    strokeDasharray=""
+                    strokeMiterlimit="10"
+                    strokeLinejoin="miter"
+                    strokeLinecap="butt"
+                    strokeWidth="1"
+                    stroke="none"
+                    fillRule="nonzero"
+                    fill="#20c997"
+                  >
+                    <g transform="scale(8,8)">
+                      <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p className="service-card-footer">Contact Us</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="w-4/12 service-card">
+      <div className="service-content">
+        <div className="service-back">
+          <div className="service-back-content">
+            <div className="service-icon"><GiHouse /></div>
+            <strong>Warehouses, Pens, and farmhouses</strong>
+          </div>
+        </div>
+
+        <div className="service-front">
+          <div className="service-img">
+            <div className="service-circle"></div>
+            <div className="service-circle" id="right"></div>
+            <div className="service-circle" id="bottom"></div>
+          </div>
+
+          <div className="service-front-content">
+            <small className="service-badge">Services</small>
+            <div className="service-description">
+              <div className="service-title">
+                <p className="service-title">
+                  <strong>Warehouses, Pens, and farmhouses</strong>
+                </p>
+                <svg
+                  fillRule="nonzero"
+                  height="15px"
+                  width="15px"
+                  viewBox="0 0 256 256"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    style={{ mixBlendMode: "normal" }}
+                    textAnchor="none"
+                    fontSize="none"
+                    fontWeight="none"
+                    fontFamily="none"
+                    strokeDashoffset="0"
+                    strokeDasharray=""
+                    strokeMiterlimit="10"
+                    strokeLinejoin="miter"
+                    strokeLinecap="butt"
+                    strokeWidth="1"
+                    stroke="none"
+                    fillRule="nonzero"
+                    fill="#20c997"
+                  >
+                    <g transform="scale(8,8)">
+                      <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <p className="service-card-footer">Contact Us</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        </div>
         </div>
       </div>
     </div>
