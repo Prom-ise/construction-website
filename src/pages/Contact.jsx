@@ -64,12 +64,24 @@ const Contact = () => {
             <label htmlFor="text" className="block text-black mb-1">
               SUBJECT
             </label>
-            <input
+            {/* <input
             className="bg-[#222630] px-4 py-3 outline-none w-full text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]"
             name="text"
             placeholder="Enter email or username"
             type="text"
-          />
+          /> */}
+          <select className="bg-[#222630] px-4 py-3 outline-none w-full text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]" name="subject" id="subject">
+            <option value="">Please select your subject</option>
+            <option value="Building from scratch">Building from scratch</option>
+            <option value="Completing">Completing</option>
+            <option value="Evaluation">Evaluation</option>
+            <option value="Drainage">Drainage</option>
+            <option value="Road">Road</option>
+            <option value="Shops, malls,mart, complexes">Shops, malls,mart, complexes</option>
+            <option value="Bridges">Bridges</option>
+            <option value="Warehouses">Warehouses</option>
+            <option value="Pens and farmhouses">Pens and farmhouses</option>
+          </select>
           </div>
           
         </div>
