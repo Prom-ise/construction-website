@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import Faq from "../components/Faq.jsx"
 import construct1 from "../assets/construct1.jpg";
 import construct2 from "../assets/construct2.jpg";
@@ -27,18 +27,18 @@ const Homepage = () => {
           </p>
 
           <div>
-            <button className="button">Learn More</button>
+           <Link to="/about" className="button">Learn More</Link>
           </div>
         </div>
         <div className="arrows w-7/12 flex items-center justify-end p-8 gap-4">
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <h1 className="arrow text-2xl bg-white rounded-2 p-1 text-[rgb(254,93,20)]">
               <FaArrowLeftLong />
             </h1>
             <h1 className="arrow text-2xl bg-white rounded-2 p-1 text-[rgb(254,93,20)]">
               <FaArrowRightLong />
             </h1>
-          </div>
+          </div> */}
         </div>
       </div>
 

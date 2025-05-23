@@ -50,7 +50,6 @@ const Navbar = () => {
     </NavLink>
   ))}
 
-  <button className="quote-button">Get a quote</button>
 </div>
 
     </div>
