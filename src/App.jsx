@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ScrollTop from "./components/ScrollTop";
+import Book from './components/Books';
 import Home from './pages/Homepage';
 import Projects from './pages/Projects';
 import Services from './pages/Services';
@@ -22,6 +23,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/book" element={<Book />} />
           <Route path='/home' element={<Navigate to='/' />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />

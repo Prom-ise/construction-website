@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import construct7 from "../assets/construct7.jpg";
 import construct8 from "../assets/construct8.jpg";
 import { GiHouse } from "react-icons/gi";
 
 const Services = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div
@@ -54,6 +56,7 @@ const Services = () => {
 
           <div className="service-front-content" style={{ backgroundImage: `url(${construct8})` }}>
             <Link to="/contact" className="service-badge">Contact Us</Link>
+            {/* <div className="service-description">Services we render.... grab your book and book with us now!!!</div> */}
             <div className="service-description">
               <div className="service-title">
                 <p className="service-title">
@@ -88,7 +91,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <button className="service-card-footer">Book now!</button>
+              <button className="service-card-footer" onClick={() => navigate(`/book?type=Building from scratch`)}>Book now!</button>
             </div>
           </div>
         </div>
@@ -146,7 +149,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <button className="service-card-footer">Book now!</button>
+              <button className="service-card-footer" onClick={() => navigate(`/book?type=Plan and Layout`)}>Book now!</button>
             </div>
           </div>
         </div>
@@ -204,7 +207,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <button className="service-card-footer">Book now!</button>
+              <button className="service-card-footer" onClick={() => navigate(`/book?type=Completing`)}>Book now!</button>
             </div>
           </div>
         </div>
