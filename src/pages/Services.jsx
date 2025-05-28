@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import construct7 from "../assets/construct7.jpg";
 import construct8 from "../assets/construct8.jpg";
 import { GiHouse } from "react-icons/gi";
@@ -21,6 +22,7 @@ const Services = () => {
         <h1 className="text-2xl font-bold text-black ">
           Our Featured Services
         </h1>
+        <h2 className="text-xl text-[rgb(254,93,20)]">Start booking now for any of your wanted service below</h2>
         <p className="text-black my-[1em]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta excepturi aut, harum numquam unde aperiam, voluptate tenetur minima commodi qui, voluptates eaque vitae eos reiciendis sapiente iusto vel maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis est fugiat obcaecati consequatur illo natus soluta dolorum harum voluptates iusto quas, alias dignissimos commodi perferendis et veritatis distinctio sint. Ratione?
         </p>
@@ -31,7 +33,7 @@ const Services = () => {
       </div>
 
       <div className="mx-auto">
-        <h1 className="text-3xl mt-[2em] font-bold text-center text-[rgb(254,93,20)]">Featured Construction Services</h1>
+        <h1 className="text-3xl mt-[2em] font-bold text-center text-[rgb(254,93,20)]">Featured Construction Services & Bookings</h1>
         <div className="mt-[3em] mb-[8em]">
         <div className="flex flex-row justify-center items-center gap-x-5 mx-5">
     <div className="w-4/12 service-card">
@@ -51,7 +53,7 @@ const Services = () => {
           </div>
 
           <div className="service-front-content" style={{ backgroundImage: `url(${construct8})` }}>
-            <small className="service-badge">Services</small>
+            <Link to="/contact" className="service-badge">Contact Us</Link>
             <div className="service-description">
               <div className="service-title">
                 <p className="service-title">
@@ -86,7 +88,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <p className="service-card-footer">Contact Us</p>
+              <button className="service-card-footer">Book now!</button>
             </div>
           </div>
         </div>
@@ -108,8 +110,8 @@ const Services = () => {
             <div className="service-circle" id="bottom"></div>
           </div>
 
-          <div className="service-front-content">
-            <small className="service-badge">Services</small>
+          <div className="service-front-content" style={{ backgroundImage: `url(${construct8})` }}>
+            <Link to="/contact" className="service-badge">Contact Us</Link>
             <div className="service-description">
               <div className="service-title">
                 <p className="service-title">
@@ -144,7 +146,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <p className="service-card-footer">Contact Us</p>
+              <button className="service-card-footer">Book now!</button>
             </div>
           </div>
         </div>
@@ -166,8 +168,8 @@ const Services = () => {
             <div className="service-circle" id="bottom"></div>
           </div>
 
-          <div className="service-front-content">
-            <small className="service-badge">Services</small>
+          <div className="service-front-content" style={{ backgroundImage: `url(${construct8})` }}>
+            <Link to="/contact" className="service-badge">Contact Us</Link>
             <div className="service-description">
               <div className="service-title">
                 <p className="service-title">
@@ -202,7 +204,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <p className="service-card-footer">Contact Us</p>
+              <button className="service-card-footer">Book now!</button>
             </div>
           </div>
         </div>
@@ -226,8 +228,8 @@ const Services = () => {
             <div className="service-circle" id="bottom"></div>
           </div>
 
-          <div className="service-front-content">
-            <small className="service-badge">Services</small>
+          <div className="service-front-content" style={{ backgroundImage: `url(${construct8})` }}>
+            <Link to="/contact" className="service-badge">Contact Us</Link>
             <div className="service-description">
               <div className="service-title">
                 <p className="service-title">
@@ -262,7 +264,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <p className="service-card-footer">Contact Us</p>
+              <button className="service-card-footer">Book now!</button>
             </div>
           </div>
         </div>
@@ -284,8 +286,8 @@ const Services = () => {
             <div className="service-circle" id="bottom"></div>
           </div>
 
-          <div className="service-front-content">
-            <small className="service-badge">Services</small>
+          <div className="service-front-content" style={{ backgroundImage: `url(${construct8})` }}>
+            <Link to="/contact" className="service-badge">Contact Us</Link>
             <div className="service-description">
               <div className="service-title">
                 <p className="service-title">
@@ -320,7 +322,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <p className="service-card-footer">Contact Us</p>
+              <button className="service-card-footer">Book now!</button>
             </div>
           </div>
         </div>
@@ -342,8 +344,8 @@ const Services = () => {
             <div className="service-circle" id="bottom"></div>
           </div>
 
-          <div className="service-front-content">
-            <small className="service-badge">Services</small>
+          <div className="service-front-content" style={{ backgroundImage: `url(${construct8})` }}>
+            <Link to="/contact" className="service-badge">Contact Us</Link>
             <div className="service-description">
               <div className="service-title">
                 <p className="service-title">
@@ -378,7 +380,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <p className="service-card-footer">Contact Us</p>
+              <button className="service-card-footer">Book now!</button>
             </div>
           </div>
         </div>
@@ -403,8 +405,8 @@ const Services = () => {
             <div className="service-circle" id="bottom"></div>
           </div>
 
-          <div className="service-front-content">
-            <small className="service-badge">Services</small>
+          <div className="service-front-content" style={{ backgroundImage: `url(${construct8})` }}>
+            <Link to="/contact" className="service-badge">Contact Us</Link>
             <div className="service-description">
               <div className="service-title">
                 <p className="service-title">
@@ -439,7 +441,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <p className="service-card-footer">Contact Us</p>
+              <button className="service-card-footer">Book now!</button>
             </div>
           </div>
         </div>
@@ -462,8 +464,8 @@ const Services = () => {
             <div className="service-circle" id="bottom"></div>
           </div>
 
-          <div className="service-front-content">
-            <small className="service-badge">Services</small>
+          <div className="service-front-content" style={{ backgroundImage: `url(${construct8})` }}>
+            <Link to="/contact" className="service-badge">Contact Us</Link>
             <div className="service-description">
               <div className="service-title">
                 <p className="service-title">
@@ -498,7 +500,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <p className="service-card-footer">Contact Us</p>
+              <button className="service-card-footer">Book now!</button>
             </div>
           </div>
         </div>
@@ -520,8 +522,8 @@ const Services = () => {
             <div className="service-circle" id="bottom"></div>
           </div>
 
-          <div className="service-front-content">
-            <small className="service-badge">Services</small>
+          <div className="service-front-content" style={{ backgroundImage: `url(${construct8})` }}>
+            <Link to="/contact" className="service-badge">Contact Us</Link>
             <div className="service-description">
               <div className="service-title">
                 <p className="service-title">
@@ -556,7 +558,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <p className="service-card-footer">Contact Us</p>
+              <button className="service-card-footer">Book now!</button>
             </div>
           </div>
         </div>

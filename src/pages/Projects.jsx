@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import construct5 from "../assets/construct5.jpg"
 import building from "../assets/building.jpg"
 import construct3 from "../assets/construct3.jpg"
@@ -131,7 +132,7 @@ const Projects = () => {
                   Ready to Discuss your Next Project?
                 </h1>
                 <div className="flex justify-center my-5">
-                  <button className="get-in font-bold">Get in Touch</button>
+                  <Link to='/contact' className="get-in font-bold">Get in Touch</Link>
                 </div>
           </div>
         </div>

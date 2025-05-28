@@ -46,7 +46,7 @@ const Homepage = () => {
 
       <div className="my-[5em]">
         <div className="flex flex-row justify-center space-x-[4em] items-center mx-auto ">
-          <div className="card w-4/12">
+          <div className="card lg:w-4/12 md:w-6/12">
             <div className="content">
               <p className="para">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
@@ -55,7 +55,7 @@ const Homepage = () => {
               </p>
             </div>
           </div>
-          <div className="card w-4/12">
+          <div className="card lg:w-4/12 md:w-6/12">
             <div className="content">
               <p className="para">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
@@ -64,7 +64,7 @@ const Homepage = () => {
               </p>
             </div>
           </div>
-          <div className="card w-4/12">
+          <div className="card lg:w-4/12 md:w-6/12">
             <div className="content">
               <p className="para">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
@@ -75,7 +75,7 @@ const Homepage = () => {
           </div>
         </div>
         <div className="flex justify-center mt-[2em]">
-          <button className="button font-bold">Past Project</button>
+          <Link to="/projects" className="button font-bold">Past Project</Link>
         </div>
       </div>
 
@@ -96,7 +96,7 @@ const Homepage = () => {
               adipisci esse blanditiis voluptas, vero a quas ratione ea
               explicabo! Nemo, quibusdam?
             </p>
-            <button className="button font-bold">About Us</button>
+            <Link to='/about' className="button font-bold">About Us</Link>
           </div>
           <div className="w-6/12">
             <img src={construct2} alt="const-img.." />
@@ -112,7 +112,7 @@ const Homepage = () => {
           Ready to Discuss your Next Project?
         </h1>
         <div className="flex justify-center my-5">
-          <button className="get-in font-bold">Get in Touch</button>
+          <Link to='/contact' className="get-in font-bold">Get in Touch</Link>
         </div>
   </div>
 </div>
