@@ -267,7 +267,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <button className="service-card-footer">Book now!</button>
+              <button className="service-card-footer" onClick={() => navigate(`/book?type=Evaluation`)}>Book now!</button>
             </div>
           </div>
         </div>
@@ -325,7 +325,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <button className="service-card-footer">Book now!</button>
+             <button className="service-card-footer" onClick={() => navigate(`/book?type=Drainage`)}>Book now!</button>
             </div>
           </div>
         </div>
@@ -383,7 +383,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <button className="service-card-footer">Book now!</button>
+             <button className="service-card-footer" onClick={() => navigate(`/book?type=Road`)}>Book now!</button>
             </div>
           </div>
         </div>
@@ -396,8 +396,7 @@ const Services = () => {
         <div className="service-back">
           <div className="service-back-content">
             <div className="service-icon"><GiHouse /></div>
-            <strong>Shops, malls,mart, complexes 
-</strong>
+            <strong>Shops, malls,mart, complexes </strong>
           </div>
         </div>
 
@@ -444,7 +443,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <button className="service-card-footer">Book now!</button>
+              <button className="service-card-footer" onClick={() => navigate(`/book?type=Shops, malls,mart, complexes`)}>Book now!</button>
             </div>
           </div>
         </div>
@@ -503,7 +502,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <button className="service-card-footer">Book now!</button>
+              <button className="service-card-footer" onClick={() => navigate(`/book?type=Bridges`)}>Book now!</button>
             </div>
           </div>
         </div>
@@ -561,7 +560,7 @@ const Services = () => {
                   </g>
                 </svg>
               </div>
-              <button className="service-card-footer">Book now!</button>
+              <button className="service-card-footer" onClick={() => navigate(`/book?type=Warehouses, Pens, and farmhouses`)}>Book now!</button>
             </div>
           </div>
         </div>
