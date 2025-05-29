@@ -1,5 +1,9 @@
 // import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import AdminLogin from "./pages/AdminLogin";
+import AdminLayout from "./components/AdminLayout";
+import AdminDashboard from "./pages/AdminDashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
 import ScrollTop from "./components/ScrollTop";
 import Book from './components/Books';
 import Home from './pages/Homepage';
@@ -22,6 +26,15 @@ function App() {
         <ScrollTop /> {/* Place it here, outside <Routes> */}
         <Navbar />
         <Routes>
+           <Route path="/admin/login" element={<AdminLogin />} />
+  <Route
+    path="/admin/dashboard"
+    element={
+      <ProtectedRoute>
+        <AdminDashboard />
+      </ProtectedRoute>
+    }
+  />
           <Route path="/" element={<Home />} />
           <Route path="/book" element={<Book />} />
           <Route path='/home' element={<Navigate to='/' />} />
