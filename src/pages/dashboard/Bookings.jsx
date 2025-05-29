@@ -1,9 +1,13 @@
-// pages/dashboard/Bookings.jsx
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Bookings = () => {
   const [bookings, setBookings] = useState([]);
+  const [filtered, setFiltered] = useState([]);
+  const [searchService, setSearchService] = useState("");
+  const [dateFrom, setDateFrom] = useState("");
+  const [dateTo, setDateTo] = useState("");
+
   const token = localStorage.getItem("adminToken");
 
   const fetchBookings = async () => {
@@ -12,31 +16,9 @@ const Bookings = () => {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBookings(res.data);
+      setFiltered(res.data); // initial view
     } catch (err) {
       console.error("Error loading bookings:", err);
-    }
-  };
-
-  const handleComplete = async (id) => {
-    try {
-      await axios.put(`/api/admin/bookings/${id}/complete`, {}, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      fetchBookings(); // refresh list
-    } catch (err) {
-      console.error("Complete error:", err);
-    }
-  };
-
-  const handleDelete = async (id) => {
-    if (!window.confirm("Are you sure?")) return;
-    try {
-      await axios.delete(`/api/admin/bookings/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      fetchBookings(); // refresh list
-    } catch (err) {
-      console.error("Delete error:", err);
     }
   };
 
@@ -44,17 +26,78 @@ const Bookings = () => {
     fetchBookings();
   }, []);
 
+  useEffect(() => {
+    let result = bookings;
+
+    // Filter by service
+    if (searchService.trim()) {
+      result = result.filter((b) =>
+        b.service?.toLowerCase().includes(searchService.toLowerCase())
+      );
+    }
+
+    // Filter by date range
+    if (dateFrom) {
+      result = result.filter((b) => new Date(b.date) >= new Date(dateFrom));
+    }
+    if (dateTo) {
+      result = result.filter((b) => new Date(b.date) <= new Date(dateTo));
+    }
+
+    setFiltered(result);
+  }, [searchService, dateFrom, dateTo, bookings]);
+
+  const handleComplete = async (id) => {
+    await axios.put(`/api/admin/bookings/${id}/complete`, {}, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    fetchBookings();
+  };
+
+  const handleDelete = async (id) => {
+    if (!window.confirm("Are you sure?")) return;
+    await axios.delete(`/api/admin/bookings/${id}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    fetchBookings();
+  };
+
   return (
     <div>
       <h1 className="text-2xl font-bold mb-4">All Bookings</h1>
-      {bookings.length === 0 ? (
+
+      {/* Filters */}
+      <div className="flex flex-wrap gap-4 mb-6">
+        <input
+          type="text"
+          placeholder="Search by service"
+          className="border px-3 py-2 rounded"
+          value={searchService}
+          onChange={(e) => setSearchService(e.target.value)}
+        />
+        <input
+          type="date"
+          className="border px-3 py-2 rounded"
+          value={dateFrom}
+          onChange={(e) => setDateFrom(e.target.value)}
+        />
+        <input
+          type="date"
+          className="border px-3 py-2 rounded"
+          value={dateTo}
+          onChange={(e) => setDateTo(e.target.value)}
+        />
+      </div>
+
+      {filtered.length === 0 ? (
         <p>No bookings found.</p>
       ) : (
         <div className="space-y-4">
-          {bookings.map((b) => (
+          {filtered.map((b) => (
             <div key={b._id} className="bg-white p-4 rounded shadow border">
               <p><strong>Name:</strong> {b.name}</p>
               <p><strong>Email:</strong> {b.email}</p>
+              <p><strong>Service:</strong> {b.service}</p>
               <p><strong>Date:</strong> {new Date(b.date).toLocaleString()}</p>
               <p>
                 <strong>Status:</strong>{" "}

@@ -1,4 +1,3 @@
-// components/AdminSidebar.jsx
 import { NavLink, useNavigate } from "react-router-dom";
 import { LogOut, BarChart, CalendarCheck, Home } from "lucide-react";
 
