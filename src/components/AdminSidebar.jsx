@@ -1,5 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { LogOut, BarChart, CalendarCheck, Home } from "lucide-react";
+import { MdLogout,  MdHome } from "react-icons/md";
+import { IoBarChart } from "react-icons/io5";
+import { FaCalendarCheck } from "react-icons/fa";
 
 const AdminSidebar = () => {
   const navigate = useNavigate();
@@ -19,7 +21,7 @@ const AdminSidebar = () => {
             isActive ? "font-semibold text-blue-600" : "text-gray-700"
           }
         >
-          <Home className="inline mr-2" /> Dashboard
+          <MdHome className="inline mr-2" /> Dashboard
         </NavLink>
         <NavLink
           to="/admin/bookings"
@@ -27,7 +29,7 @@ const AdminSidebar = () => {
             isActive ? "font-semibold text-blue-600" : "text-gray-700"
           }
         >
-          <CalendarCheck className="inline mr-2" /> Bookings
+          <FaCalendarCheck className="inline mr-2" /> Bookings
         </NavLink>
         <NavLink
           to="/admin/analytics"
@@ -35,10 +37,10 @@ const AdminSidebar = () => {
             isActive ? "font-semibold text-blue-600" : "text-gray-700"
           }
         >
-          <BarChart className="inline mr-2" /> Analytics
+          <IoBarChart className="inline mr-2" /> Analytics
         </NavLink>
         <button onClick={logout} className="mt-auto text-red-600 hover:underline">
-          <LogOut className="inline mr-2" /> Logout
+          <MdLogout className="inline mr-2" /> Logout
         </button>
       </nav>
     </aside>

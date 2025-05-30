@@ -45,7 +45,7 @@ const Homepage = () => {
       <div></div>
 
       <div className="my-[5em]">
-        <div className="flex flex-row justify-center space-x-[4em] items-center mx-auto ">
+        <div className="grid grid-cols-1 sm:grid-cols-3 justify-center space-x-[4em] items-center mx-auto ">
           <div className="card lg:w-4/12 md:w-6/12">
             <div className="content">
               <p className="para">

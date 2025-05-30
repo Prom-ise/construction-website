@@ -12,7 +12,7 @@ const Bookings = () => {
 
   const fetchBookings = async () => {
     try {
-      const res = await axios.get("/api/admin/bookings", {
+      const res = await axios.get("http://localhost:5000/api/admin/bookings", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBookings(res.data);
@@ -48,7 +48,7 @@ const Bookings = () => {
   }, [searchService, dateFrom, dateTo, bookings]);
 
   const handleComplete = async (id) => {
-    await axios.put(`/api/admin/bookings/${id}/complete`, {}, {
+    await axios.put(`http://localhost:5000/api/admin/bookings/${id}/complete`, {}, {
       headers: { Authorization: `Bearer ${token}` },
     });
     fetchBookings();
@@ -56,7 +56,7 @@ const Bookings = () => {
 
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure?")) return;
-    await axios.delete(`/api/admin/bookings/${id}`, {
+    await axios.delete(`http://localhost:5000/api/admin/bookings/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     fetchBookings();
