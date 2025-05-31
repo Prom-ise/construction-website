@@ -9,6 +9,9 @@ const AdminLogin = () => {
   const [resetCode, setResetCode] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [resetMsg, setResetMsg] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [resetLoading, setResetLoading] = useState(false);
+  const [sendCodeLoading, setSendCodeLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -19,6 +22,7 @@ const AdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    setLoading(true);
     try {
       const res = await fetch("https://construct-backend.onrender.com/api/auth/login", {
         method: "POST",
@@ -28,12 +32,15 @@ const AdminLogin = () => {
       const data = await res.json();
       if (!res.ok) {
         setError(data.message || "Login failed");
+        setLoading(false);
         return;
       }
       localStorage.setItem("adminToken", data.token);
       navigate("/admin/dashboard");
     } catch (err) {
       setError("Something went wrong");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -41,6 +48,7 @@ const AdminLogin = () => {
   const handleSendResetCode = async () => {
     setResetMsg("");
     setError("");
+    setSendCodeLoading(true);
     try {
       const res = await fetch("https://construct-backend.onrender.com/api/auth/sendResetCode", {
         method: "POST",
@@ -50,12 +58,15 @@ const AdminLogin = () => {
       const data = await res.json();
       if (!res.ok) {
         setError(data.message || "Failed to send reset code");
+        setSendCodeLoading(false);
         return;
       }
       setResetEmailSent(true);
       setResetMsg("Reset code sent to admin email.");
     } catch {
       setError("Failed to send reset code");
+    } finally {
+      setSendCodeLoading(false);
     }
   };
 
@@ -64,6 +75,7 @@ const AdminLogin = () => {
     e.preventDefault();
     setResetMsg("");
     setError("");
+    setResetLoading(true);
     try {
       const res = await fetch("https://construct-backend.onrender.com/api/auth/resetPassword", {
         method: "POST",
@@ -73,6 +85,7 @@ const AdminLogin = () => {
       const data = await res.json();
       if (!res.ok) {
         setError(data.message || "Failed to reset password");
+        setResetLoading(false);
         return;
       }
       setResetMsg("Password updated! You can now login.");
@@ -82,6 +95,8 @@ const AdminLogin = () => {
       setNewPassword("");
     } catch {
       setError("Failed to reset password");
+    } finally {
+      setResetLoading(false);
     }
   };
 
@@ -106,13 +121,36 @@ const AdminLogin = () => {
             className="w-full p-2 border rounded"
             required
           />
-          <button className="w-full bg-blue-600 text-white p-2 rounded" type="submit">
-            Login
+          <button
+            className="w-full bg-blue-600 text-white p-2 rounded flex items-center justify-center"
+            type="submit"
+            disabled={loading}
+          >
+            {loading && (
+              <svg className="animate-spin h-5 w-5 mr-2 text-white" viewBox="0 0 24 24">
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                  fill="none"
+                />
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                />
+              </svg>
+            )}
+            {loading ? "Logging in..." : "Login"}
           </button>
           <button
             type="button"
             className="w-full text-blue-600 underline mt-2"
             onClick={() => setShowReset(true)}
+            disabled={loading}
           >
             Change password?
           </button>
@@ -133,10 +171,29 @@ const AdminLogin = () => {
               />
               <button
                 type="button"
-                className="w-full bg-blue-600 text-white p-2 rounded"
+                className="w-full bg-blue-600 text-white p-2 rounded flex items-center justify-center"
                 onClick={handleSendResetCode}
+                disabled={sendCodeLoading}
               >
-                Send Reset Code
+                {sendCodeLoading && (
+                  <svg className="animate-spin h-5 w-5 mr-2 text-white" viewBox="0 0 24 24">
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      fill="none"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                    />
+                  </svg>
+                )}
+                {sendCodeLoading ? "Sending..." : "Send Reset Code"}
               </button>
             </>
           ) : (
@@ -157,8 +214,30 @@ const AdminLogin = () => {
                 className="w-full p-2 border rounded"
                 required
               />
-              <button className="w-full bg-green-600 text-white p-2 rounded" type="submit">
-                Reset Password
+              <button
+                className="w-full bg-green-600 text-white p-2 rounded flex items-center justify-center"
+                type="submit"
+                disabled={resetLoading}
+              >
+                {resetLoading && (
+                  <svg className="animate-spin h-5 w-5 mr-2 text-white" viewBox="0 0 24 24">
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      fill="none"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                    />
+                  </svg>
+                )}
+                {resetLoading ? "Resetting..." : "Reset Password"}
               </button>
             </>
           )}
@@ -171,6 +250,7 @@ const AdminLogin = () => {
               setResetMsg("");
               setError("");
             }}
+            disabled={resetLoading || sendCodeLoading}
           >
             Back to Login
           </button>
