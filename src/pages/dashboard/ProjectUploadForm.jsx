@@ -18,7 +18,7 @@ const ProjectUploadForm = () => {
 
   const fetchProjects = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/projects');
+      const response = await axios.get('https://construct-backend.onrender.com/api/projects');
       setProjects(response.data);
     } catch (error) {
       console.error('Error fetching projects:', error);
@@ -39,7 +39,7 @@ const ProjectUploadForm = () => {
     formData.append('image', image);
 
     try {
-      await axios.post('http://localhost:5000/api/projects/add', formData, {
+      await axios.post('https://construct-backend.onrender.com/api/projects/add', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
@@ -61,7 +61,7 @@ const ProjectUploadForm = () => {
   const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this project?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/projects/${id}`, {
+      await axios.delete(`https://construct-backend.onrender.com/api/projects/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
         },
@@ -76,7 +76,7 @@ const ProjectUploadForm = () => {
     const newStatus = currentStatus === 'completed' ? 'ongoing' : 'completed';
     try {
       await axios.patch(
-        `http://localhost:5000/api/projects/${id}/status`,
+        `https://construct-backend.onrender.com/api/projects/${id}/status`,
         { status: newStatus },
         {
           headers: {
@@ -183,7 +183,7 @@ const ProjectUploadForm = () => {
         {projects.map((project) => (
           <div className="cards3 bg-white rounded shadow flex flex-col" key={project._id}>
             <div className="card3-image">
-              <img src={`http://localhost:5000${project.image}`} alt={project.title} className="w-full h-56 object-cover rounded-t" />
+              <img src={`https://construct-backend.onrender.com${project.image}`} alt={project.title} className="w-full h-56 object-cover rounded-t" />
             </div>
             <div className="category">{project.title}</div>
             <div className="heading">{project.category}</div>

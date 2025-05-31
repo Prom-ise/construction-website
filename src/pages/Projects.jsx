@@ -10,7 +10,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () =>{
       try {
-        const response = await axios.get('http://localhost:5000/api/projects');
+        const response = await axios.get('https://construct-backend.onrender.com/api/projects');
         setProjects(response.data);
       } catch (error) {
         console.error('Error fetching projects:', error);
@@ -35,7 +35,7 @@ const Projects = () => {
         {projects.map((project) => (
           <div className="cards3 bg-white rounded shadow flex flex-col" key={project._id}>
             <div className="card3-image">
-              <img src={`http://localhost:5000${project.image}`} alt={project.title} className="w-full h-56 object-cover rounded-t" />
+              <img src={`https://construct-backend.onrender.com${project.image}`} alt={project.title} className="w-full h-56 object-cover rounded-t" />
             </div>
             <div className="category font-semibold text-lg mt-2">{project.title}</div>
             <div className="heading text-gray-500">{project.category}</div>

@@ -35,7 +35,7 @@ const Book = () => {
     setStatus("loading");
 
     try {
-      const res = await fetch("http://localhost:5000/api/bookings", {
+      const res = await fetch("https://construct-backend.onrender.com/api/bookings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

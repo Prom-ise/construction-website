@@ -8,7 +8,7 @@ const DashboardHome = () => {
     const fetchStats = async () => {
       try {
         const token = localStorage.getItem('adminToken');
-        const res = await axios.get('http://localhost:5000/api/admin/stats/summary', {
+        const res = await axios.get('https://construct-backend.onrender.com/api/admin/stats/summary', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setStats(res.data);

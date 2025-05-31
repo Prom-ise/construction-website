@@ -20,7 +20,7 @@ const AdminLogin = () => {
     e.preventDefault();
     setError("");
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch("https://construct-backend.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -42,7 +42,7 @@ const AdminLogin = () => {
     setResetMsg("");
     setError("");
     try {
-      const res = await fetch("http://localhost:5000/api/auth/sendResetCode", {
+      const res = await fetch("https://construct-backend.onrender.com/api/auth/sendResetCode", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: form.email }),
@@ -65,7 +65,7 @@ const AdminLogin = () => {
     setResetMsg("");
     setError("");
     try {
-      const res = await fetch("http://localhost:5000/api/auth/resetPassword", {
+      const res = await fetch("https://construct-backend.onrender.com/api/auth/resetPassword", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code: resetCode, newPassword }),

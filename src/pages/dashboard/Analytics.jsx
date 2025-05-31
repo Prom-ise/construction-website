@@ -13,10 +13,10 @@ const Analytics = () => {
     const fetchStats = async () => {
       try {
         const [monthly, summaryRes] = await Promise.all([
-          axios.get("http://localhost:5000/api/admin/stats/monthly", {
+          axios.get("https://construct-backend.onrender.com/api/admin/stats/monthly", {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          axios.get("http://localhost:5000/api/admin/stats/summary", {
+          axios.get("https://construct-backend.onrender.com/api/admin/stats/summary", {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);

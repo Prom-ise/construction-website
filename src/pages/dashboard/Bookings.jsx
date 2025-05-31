@@ -12,7 +12,7 @@ const Bookings = () => {
 
   const fetchBookings = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/bookings", {
+      const res = await axios.get("https://construct-backend.onrender.com/api/bookings", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBookings(res.data);
@@ -51,7 +51,7 @@ const handleComplete = async (id, currentStatus) => {
 
   try {
     await axios.patch(
-      `http://localhost:5000/api/bookings/${id}/complete`,
+      `https://construct-backend.onrender.com/api/bookings/${id}/complete`,
       { status: newStatus },
       {  headers: {
             Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
@@ -67,7 +67,7 @@ const handleComplete = async (id, currentStatus) => {
 
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure?")) return;
-    await axios.delete(`http://localhost:5000/api/bookings/${id}`, {
+    await axios.delete(`https://construct-backend.onrender.com/api/bookings/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     fetchBookings();
