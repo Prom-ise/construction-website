@@ -7,6 +7,7 @@ const ProjectUploadForm = () => {
   const [category, setCategory] = useState('');
   const [status, setStatus] = useState('ongoing');
   const [image, setImage] = useState(null);
+  const fileInputRef = useRef(null);
   const [preview, setPreview] = useState(null);
   const [projects, setProjects] = useState([]);
   const [error, setError] = useState('');
@@ -57,6 +58,7 @@ const ProjectUploadForm = () => {
       setStatus('ongoing');
       setImage(null);
       setPreview(null);
+      if (fileInputRef.current) fileInputRef.current.value = null;
       setSuccess('Project uploaded successfully!');
       fetchProjects();
     } catch (error) {
@@ -172,6 +174,7 @@ const ProjectUploadForm = () => {
               accept="image/*"
               onChange={handleImageChange}
               required
+               ref={fileInputRef}
               className="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700"
             />
             {preview && (
