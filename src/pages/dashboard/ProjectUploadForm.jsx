@@ -94,29 +94,90 @@ const ProjectUploadForm = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} required />
-        <textarea placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} required />
-        <select value={category} onChange={(e) => setCategory(e.target.value)} required>
-          <option value="">Select Category</option>
-          <option value="Building from scratch">Building from scratch</option>
-              <option value="Completing">Completing</option>
-              <option value="Evaluation">Evaluation</option>
-              <option value="Drainage">Drainage</option>
-              <option value="Road">Road</option>
-              <option value="Shops, malls, mart, complexes">Shops, malls, mart, complexes</option>
-              <option value="Bridges">Bridges</option>
-              <option value="Warehouses">Warehouses</option>
-              <option value="Pens and farmhouses">Pens and farmhouses</option>
-        </select>
-        <select value={status} onChange={(e) => setStatus(e.target.value)}>
-          <option value="ongoing">Ongoing</option>
-          <option value="completed">Completed</option>
-        </select>
-        <input type="file" accept="image/*" onChange={handleImageChange} required />
-        {preview && <img src={preview} alt="Preview" width="200" />}
-        <button type="submit">Upload Project</button>
-      </form>
+      <form
+  onSubmit={handleSubmit}
+  className="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-6 md:p-10 my-8 space-y-6"
+>
+  <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">Upload New Project</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="flex flex-col space-y-2">
+      <label className="font-semibold text-gray-700">Title</label>
+      <input
+        type="text"
+        placeholder="Title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        required
+        className="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      />
+    </div>
+    <div className="flex flex-col space-y-2">
+      <label className="font-semibold text-gray-700">Category</label>
+      <select
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+        required
+        className="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      >
+        <option value="">Select Category</option>
+        <option value="Building from scratch">Building from scratch</option>
+        <option value="Completing">Completing</option>
+        <option value="Evaluation">Evaluation</option>
+        <option value="Drainage">Drainage</option>
+        <option value="Road">Road</option>
+        <option value="Shops, malls, mart, complexes">Shops, malls, mart, complexes</option>
+        <option value="Bridges">Bridges</option>
+        <option value="Warehouses">Warehouses</option>
+        <option value="Pens and farmhouses">Pens and farmhouses</option>
+      </select>
+    </div>
+    <div className="flex flex-col space-y-2 md:col-span-2">
+      <label className="font-semibold text-gray-700">Description</label>
+      <textarea
+        placeholder="Description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+        required
+        rows={3}
+        className="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+      />
+    </div>
+    <div className="flex flex-col space-y-2">
+      <label className="font-semibold text-gray-700">Status</label>
+      <select
+        value={status}
+        onChange={(e) => setStatus(e.target.value)}
+        className="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      >
+        <option value="ongoing">Ongoing</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+    <div className="flex flex-col space-y-2">
+      <label className="font-semibold text-gray-700">Project Image</label>
+      <input
+        type="file"
+        accept="image/*"
+        onChange={handleImageChange}
+        required
+        className="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700"
+      />
+      {preview && (
+        <img
+          src={preview}
+          alt="Preview"
+          className="mt-2 rounded shadow max-h-40 object-contain"
+        />
+      )}
+    </div>
+  </div>
+  <button
+    type="submit"
+    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded transition"
+  >
+    Upload Project
+  </button>
+</form>
 
       <div className="projects-container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
         {projects.map((project) => (
