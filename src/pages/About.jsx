@@ -31,7 +31,7 @@ const About = () => {
       <div className="container mb-10 text-black mx-auto px-4 md:px-[3em]">
         <h1 className='text-2xl md:text-3xl my-10 font-bold text-center pt-8 pb-4'>Our People</h1>
         
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mx-auto px-4 justify-center items-center'>
+        <div className='flex flex-col md:flex-row gap-6 w-full justify-center items-center mt-10'>
           {[1, 2, 3].map((_, i) => (
             <div className="card2 flex flex-col items-center md:w-4/12 w-full bg-white rounded shadow p-4" key={i}>
               <div className="card2-image mb-2">
