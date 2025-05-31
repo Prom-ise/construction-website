@@ -22,7 +22,7 @@ const Footer = () => {
         {NavLinks.map((link) => (
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-blue-600 font-semibold" : "text-gray-700 font-semibold"
+              isActive ? "text-blue-600 font-semibold" : "text-white font-semibold"
             }
             key={link.name}
             to={link.path}
@@ -37,7 +37,6 @@ const Footer = () => {
         ))}
       </div>
 
-      {/* Contact & Social */}
       <div className='flex flex-col md:flex-row justify-between items-center bg-[rgb(19,25,68)] mx-3 rounded-2xl px-4 py-4 gap-4 md:gap-0'>
         <a
           href="tel:+23481000659398"
@@ -84,7 +83,7 @@ const Footer = () => {
         {NavLinked.map((link) => (
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-blue-600 font-semibold" : "text-gray-700 font-semibold"
+              isActive ? "text-blue-600 font-semibold" : "text-white font-semibold"
             }
             key={link.name}
             to={link.path}
@@ -99,7 +98,6 @@ const Footer = () => {
         ))}
       </div>
 
-      {/* Copyright */}
       <div className='text-center text-[rgb(254,93,20)] mt-4 text-sm'>
         ©2024 Construction. All rights Reserved | Designed by Dev_Promise
       </div>

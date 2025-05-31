@@ -33,7 +33,6 @@ const Analytics = () => {
     <div className="p-4">
       <h1 className="text-2xl font-semibold mb-6">Dashboard Analytics</h1>
 
-      {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 text-white">
         <div className="bg-white dark:bg-gray-800 shadow rounded-xl p-4">
           <h2 className="text-gray-500 text-sm">Total Bookings</h2>
@@ -49,7 +48,6 @@ const Analytics = () => {
         </div>
       </div>
 
-      {/* Chart */}
       {data.length === 0 ? (
         <p>No data to display</p>
       ) : (

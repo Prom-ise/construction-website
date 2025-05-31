@@ -16,7 +16,7 @@ const Bookings = () => {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBookings(res.data);
-      setFiltered(res.data); // initial view
+      setFiltered(res.data);
     } catch (err) {
       console.error("Error loading bookings:", err);
     }
@@ -29,14 +29,12 @@ const Bookings = () => {
   useEffect(() => {
     let result = bookings;
 
-    // Filter by service
     if (searchService.trim()) {
       result = result.filter((b) =>
         b.service?.toLowerCase().includes(searchService.toLowerCase())
       );
     }
 
-    // Filter by date range
     if (dateFrom) {
       result = result.filter((b) => new Date(b.date) >= new Date(dateFrom));
     }
@@ -59,13 +57,6 @@ const handleComplete = async (id, currentStatus) => {
             Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
           }, }
     );
-
-    // setBookings((prev) =>
-    //   prev.map((b) =>
-    //     b._id === id ? { ...b, completed: true } : b
-    //   )
-    // );
-
     alert("Marked as completed.");
     fetchBookings();
   } catch (err) {
@@ -86,7 +77,6 @@ const handleComplete = async (id, currentStatus) => {
     <div>
       <h1 className="text-2xl font-bold mb-4">All Bookings</h1>
 
-      {/* Filters */}
       <div className="flex flex-wrap gap-4 mb-6">
         <input
           type="text"

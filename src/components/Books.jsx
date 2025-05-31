@@ -27,7 +27,6 @@ const Book = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Simple math CAPTCHA check
     if (parseInt(userAnswer) !== num1 + num2) {
       setStatus("captchaError");
       return;
@@ -96,7 +95,6 @@ const Book = () => {
           className="w-full border p-2 rounded"
         />
 
-        {/* CAPTCHA */}
         <div className="flex items-center space-x-2">
           <label className="text-sm">
             What is {num1} + {num2}? (to verify you're human)

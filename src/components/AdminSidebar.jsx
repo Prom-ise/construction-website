@@ -13,7 +13,6 @@ const AdminSidebar = () => {
     navigate("/admin/login");
   };
 
-  // Sidebar content as a component for reuse
   const SidebarContent = (
     <nav className="flex flex-col p-4 gap-4 h-full">
       <NavLink
@@ -63,7 +62,6 @@ const AdminSidebar = () => {
 
   return (
     <>
-      {/* Hamburger for mobile */}
       <button
         className="md:hidden fixed top-4 left-4 z-50 bg-white rounded-full p-2 shadow"
         onClick={() => setOpen(true)}
@@ -72,7 +70,6 @@ const AdminSidebar = () => {
         <MdMenu size={28} />
       </button>
 
-      {/* Overlay */}
       {open && (
         <div
           className="fixed inset-0 bg-black bg-opacity-40 z-40 md:hidden"
@@ -80,7 +77,6 @@ const AdminSidebar = () => {
         />
       )}
 
-      {/* Sidebar */}
       <aside
         className={`
           fixed top-0 left-0 h-full w-64 bg-white border-r shadow-md z-50
@@ -90,7 +86,7 @@ const AdminSidebar = () => {
         `}
         style={{ maxWidth: "16rem" }}
       >
-        {/* Close arrow for mobile */}
+
         <div className="md:hidden flex justify-end p-2">
           <button
             onClick={() => setOpen(false)}

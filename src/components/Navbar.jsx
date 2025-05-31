@@ -18,7 +18,6 @@ const Navbar = () => {
       {/* Logo */}
       <div className='logo text-[rgb(254,93,20)] font-bold text-xl'>Dev_Promise</div>
 
-      {/* Hamburger for mobile */}
       <button
         className="md:hidden text-3xl"
         onClick={() => setOpen(!open)}
@@ -27,7 +26,6 @@ const Navbar = () => {
         {open ? <MdClose /> : <MdMenu />}
       </button>
 
-      {/* Links */}
       <div className={`fixed md:static top-0 right-0 h-full w-2/3 max-w-xs bg-white shadow-lg md:bg-transparent md:shadow-none transition-transform duration-300
         ${open ? "translate-x-0" : "translate-x-full"} md:translate-x-0 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-5 p-8 md:p-0`}
         style={{ zIndex: 100 }}
@@ -44,7 +42,7 @@ const Navbar = () => {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "text-blue-600 font-semibold"
+                ? "text-[rgb(rgb(254,93,20))] font-semibold"
                 : "text-gray-700 font-semibold"
             }
             key={link.name}
@@ -61,7 +59,6 @@ const Navbar = () => {
         ))}
       </div>
 
-      {/* Overlay for mobile */}
       {open && (
         <div
           className="fixed inset-0 bg-black bg-opacity-40 z-40 md:hidden"

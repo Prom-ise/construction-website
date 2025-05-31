@@ -10,9 +10,7 @@ const About = () => {
         className='w-full bg-cover bg-center bg-no-repeat relative'
         style={{ backgroundImage: `url(${construct4})` }}
       >
-        {/* Overlay */}
         <div className='absolute inset-0 bg-black bg-opacity-50'></div>
-        {/* Content */}
         <div className='relative z-10'>
           <h1 className='text-4xl md:text-6xl font-bold text-center text-white py-16 md:p-[3em]'>About</h1>
         </div>
@@ -32,7 +30,7 @@ const About = () => {
 
       <div className="container mb-10 text-black mx-auto px-4 md:px-[3em]">
         <h1 className='text-2xl md:text-3xl my-10 font-bold text-center pt-8 pb-4'>Our People</h1>
-        {/* People grid */}
+        
         <div className='flex flex-col md:flex-row gap-6 w-full justify-center items-center'>
           {[1, 2, 3].map((_, i) => (
             <div className="card2 flex flex-col items-center md:w-4/12 w-full bg-white rounded shadow p-4" key={i}>

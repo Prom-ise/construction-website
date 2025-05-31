@@ -45,7 +45,7 @@ const ProjectUploadForm = () => {
           Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
         },
       });
-      // Optionally reset form here
+
       setTitle('');
       setDescription('');
       setCategory('');
@@ -58,7 +58,6 @@ const ProjectUploadForm = () => {
     }
   };
 
-  // DELETE PROJECT
   const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this project?')) return;
     try {
@@ -73,7 +72,6 @@ const ProjectUploadForm = () => {
     }
   };
 
-  // TOGGLE STATUS
   const handleToggleStatus = async (id, currentStatus) => {
     const newStatus = currentStatus === 'completed' ? 'ongoing' : 'completed';
     try {
