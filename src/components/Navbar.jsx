@@ -1,59 +1,75 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from "react-router-dom";
+import { MdMenu, MdClose } from "react-icons/md";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   const NavLinks = [
-    {
-      name: "Homepage",
-      path: "/",
-    },
-    {
-      name: "About",
-      path: "/about",
-    },
-    {
-      name: "Projects",
-      path: "/projects",
-    },
-    {
-      name: "Services",
-      path: "/services"
-    },
-    {
-      name: "Contact",
-      path: "/contact",
-    },
-    // { name: "Service", path: "/About/Service" }
+    { name: "Homepage", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Projects", path: "/projects" },
+    { name: "Services", path: "/services" },
+    { name: "Contact", path: "/contact" },
   ];
+
   return (
-    <div className='navbar'>
-      <div className='logo text-[rgb(254,93,20)]'>Dev_Promise Construction</div>
-      <div className="flex items-center space-x-5">
-  {NavLinks.map((link) => (
-    <NavLink
-      className={({ isActive }) =>
-        isActive ? "navlink" : "unlink no-underline"
-      }
-      key={link.name}
-      to={link.path}
-    >
-      <div
-        style={{
-          textAlign: "center",
-          textDecoration: "none",
-          fontWeight: "600",
-          fontSize: "20px",
-        }}
+    <nav className="navbar bg-white shadow-md px-4 py-3 flex items-center justify-between relative z-50">
+      {/* Logo */}
+      <div className='logo text-[rgb(254,93,20)] font-bold text-xl'>Dev_Promise</div>
+
+      {/* Hamburger for mobile */}
+      <button
+        className="md:hidden text-3xl"
+        onClick={() => setOpen(!open)}
+        aria-label="Toggle menu"
       >
-        {link.name}
+        {open ? <MdClose /> : <MdMenu />}
+      </button>
+
+      {/* Links */}
+      <div className={`fixed md:static top-0 right-0 h-full w-2/3 max-w-xs bg-white shadow-lg md:bg-transparent md:shadow-none transition-transform duration-300
+        ${open ? "translate-x-0" : "translate-x-full"} md:translate-x-0 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-5 p-8 md:p-0`}
+        style={{ zIndex: 100 }}
+      >
+        {/* Close button for mobile */}
+        <button
+          className="md:hidden mb-8 self-end text-2xl"
+          onClick={() => setOpen(false)}
+          aria-label="Close menu"
+        >
+          <MdClose />
+        </button>
+        {NavLinks.map((link) => (
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-600 font-semibold"
+                : "text-gray-700 font-semibold"
+            }
+            key={link.name}
+            to={link.path}
+            onClick={() => setOpen(false)}
+            style={{
+              textAlign: "center",
+              textDecoration: "none",
+              fontSize: "18px",
+            }}
+          >
+            {link.name}
+          </NavLink>
+        ))}
       </div>
-    </NavLink>
-  ))}
 
-</div>
+      {/* Overlay for mobile */}
+      {open && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-40 z-40 md:hidden"
+          onClick={() => setOpen(false)}
+        />
+      )}
+    </nav>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Navbar
+export default Navbar;
