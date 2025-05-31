@@ -39,6 +39,11 @@ const AdminSidebar = () => {
         >
           <IoBarChart className="inline mr-2" /> Analytics
         </NavLink>
+        <NavLink to="/admin/upload-project" className={({ isActive }) =>
+          isActive ? "font-semibold text-blue-600" : "text-gray-700"
+      }>
+        <IoBarChart className="inline mr-2" /> Project Upload
+      </NavLink>
         <button onClick={logout} className="mt-auto text-red-600 hover:underline">
           <MdLogout className="inline mr-2" /> Logout
         </button>

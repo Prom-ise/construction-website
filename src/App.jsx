@@ -17,6 +17,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import AdminDashboard from "./pages/dashboard/DashboardHome";
 import Bookings from "./pages/dashboard/Bookings";
 import Analytics from "./pages/dashboard/Analytics";
+import ProjectUploadForm from "./pages/dashboard/ProjectUploadForm";
 
 // Public
 import Navbar from "./components/Navbar";
@@ -71,6 +72,7 @@ function App() {
             <Route path="dashboard" element={<AdminDashboard />} />
             <Route path="bookings" element={<Bookings />} />
             <Route path="analytics" element={<Analytics />} />
+            <Route path="upload-project" element={<ProjectUploadForm />} />
           </Route>
 
           {/* Public Routes */}

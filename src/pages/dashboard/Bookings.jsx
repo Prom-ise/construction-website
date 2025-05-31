@@ -12,7 +12,7 @@ const Bookings = () => {
 
   const fetchBookings = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/bookings", {
+      const res = await axios.get("http://localhost:5000/api/bookings", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBookings(res.data);
@@ -47,16 +47,36 @@ const Bookings = () => {
     setFiltered(result);
   }, [searchService, dateFrom, dateTo, bookings]);
 
-  const handleComplete = async (id) => {
-    await axios.put(`http://localhost:5000/api/admin/bookings/${id}/complete`, {}, {
-      headers: { Authorization: `Bearer ${token}` },
-    });
+const handleComplete = async (id, currentStatus) => {
+  const newStatus = currentStatus === 'completed' ? 'pending' : 'completed';
+  if (!window.confirm("Are you sure?")) return;
+
+  try {
+    await axios.patch(
+      `http://localhost:5000/api/bookings/${id}/complete`,
+      { status: newStatus },
+      {  headers: {
+            Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
+          }, }
+    );
+
+    // setBookings((prev) =>
+    //   prev.map((b) =>
+    //     b._id === id ? { ...b, completed: true } : b
+    //   )
+    // );
+
+    alert("Marked as completed.");
     fetchBookings();
-  };
+  } catch (err) {
+    console.error("Error in marking booking as completed:", err);
+    alert("Failed to mark booking as completed. Please check console for details.");
+  }
+};
 
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure?")) return;
-    await axios.delete(`http://localhost:5000/api/admin/bookings/${id}`, {
+    await axios.delete(`http://localhost:5000/api/bookings/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     fetchBookings();

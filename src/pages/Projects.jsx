@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
-import construct5 from "../assets/construct5.jpg"
-import building from "../assets/building.jpg"
-import construct3 from "../assets/construct3.jpg"
+import construct5 from "../assets/construct5.jpg";
+import building from "../assets/building.jpg";
+import construct3 from "../assets/construct3.jpg";
+import axios from 'axios';
 
 const Projects = () => {
+  const [projects, setProjects] = useState([])
+  useEffect(() => {
+    const fetchProjects = async () =>{
+      try {
+        const response = await axios.get('http://localhost:5000/api/projects');
+        setProjects(response.data);
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+      }
+    };
+    fetchProjects();
+  })
   return (
     <div>
        <div
@@ -16,7 +29,7 @@ const Projects = () => {
   </div>
         </div>
 
-        <div className='my-[6em] mb-[7em]'>
+        {/* <div className='my-[6em] mb-[7em]'>
           <h1 className='text-center text-[rgb(254,93,20)]'>Our Past Projects</h1>
           <h1 className='text-center text-4xl text-[navy] font-bold'>Featured Previous Projects</h1>
 
@@ -123,7 +136,23 @@ const Projects = () => {
             </div>
              </div>
           </div>
-        </div>
+        </div> */}
+
+      <div className="projects-container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
+  {projects.map((project) => (
+    <div className="cards3 bg-white rounded shadow flex flex-col" key={project._id}>
+      <div className="card3-image">
+        <img src={`http://localhost:5000${project.image}`} alt={project.title} className="w-full h-56 object-cover rounded-t" />
+      </div>
+      <div className="category">{project.title}</div>
+      <div className="heading">{project.category}</div>
+      <p className='text-black text-center'>{project.description}</p>
+      <p className='text-black text-center'>{project.status}</p>
+    </div>
+  ))}
+</div>
+
+
          <div className="relative p-[3em] w-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${construct3})` }}>
           <div className="absolute inset-0 bg-black opacity-60"></div> {/* Dark overlay */}
           
