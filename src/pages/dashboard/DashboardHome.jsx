@@ -7,7 +7,7 @@ const DashboardHome = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('adminToken');
         const res = await axios.get('http://localhost:5000/api/admin/stats/summary', {
           headers: { Authorization: `Bearer ${token}` },
         });

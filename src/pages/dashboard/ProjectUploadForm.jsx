@@ -99,10 +99,15 @@ const ProjectUploadForm = () => {
         <textarea placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} required />
         <select value={category} onChange={(e) => setCategory(e.target.value)} required>
           <option value="">Select Category</option>
-          <option value="road">Road</option>
-          <option value="warehouse">Warehouse</option>
-          <option value="pen house">Pen House</option>
-          <option value="bridge">Bridge</option>
+          <option value="Building from scratch">Building from scratch</option>
+              <option value="Completing">Completing</option>
+              <option value="Evaluation">Evaluation</option>
+              <option value="Drainage">Drainage</option>
+              <option value="Road">Road</option>
+              <option value="Shops, malls, mart, complexes">Shops, malls, mart, complexes</option>
+              <option value="Bridges">Bridges</option>
+              <option value="Warehouses">Warehouses</option>
+              <option value="Pens and farmhouses">Pens and farmhouses</option>
         </select>
         <select value={status} onChange={(e) => setStatus(e.target.value)}>
           <option value="ongoing">Ongoing</option>
