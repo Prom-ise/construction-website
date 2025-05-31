@@ -177,6 +177,8 @@ const ProjectUploadForm = () => {
   </button>
 </form>
 
+      <div className='text-center text-[black] font-bold text-2xl'>Project Uploads</div>
+
       <div className="projects-container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
         {projects.map((project) => (
           <div className="cards3 bg-white rounded shadow flex flex-col" key={project._id}>

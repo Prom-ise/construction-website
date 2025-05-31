@@ -111,19 +111,21 @@ const handleComplete = async (id, currentStatus) => {
               <p><strong>Date:</strong> {new Date(b.date).toLocaleString()}</p>
               <p>
                 <strong>Status:</strong>{" "}
-                <span className={b.completed ? "text-green-600" : "text-yellow-600"}>
-                  {b.completed ? "Completed" : "Pending"}
-                </span>
+                <span className={b.status === "completed" ? "text-green-600" : "text-yellow-600"}>
+  {b.status === "completed" ? "Completed" : "Pending"}
+</span>
+
               </p>
               <div className="mt-2 space-x-2">
-                {!b.completed && (
-                  <button
-                    onClick={() => handleComplete(b._id)}
-                    className="px-3 py-1 bg-green-600 text-white rounded text-sm"
-                  >
-                    Mark as Completed
-                  </button>
-                )}
+               {b.status !== "completed" && (
+  <button
+    onClick={() => handleComplete(b._id, b.status)}
+    className="px-3 py-1 bg-green-600 text-white rounded text-sm"
+  >
+    Mark as Completed
+  </button>
+)}
+
                 <button
                   onClick={() => handleDelete(b._id)}
                   className="px-3 py-1 bg-red-600 text-white rounded text-sm"

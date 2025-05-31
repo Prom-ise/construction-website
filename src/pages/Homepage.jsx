@@ -36,23 +36,23 @@ const Homepage = () => {
 
       {/* Cards Section */}
       <div className="my-10 md:my-[5em]">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-[4em] items-center mx-auto px-4">
-          {[1, 2, 3].map((_, i) => (
-            <div className="card w-full md:w-11/12 mx-auto" key={i}>
-              <div className="content">
-                <p className="para">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
-                  laboriosam at voluptas minus culpa deserunt delectus sapiente
-                  inventore pariatur
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="flex justify-center mt-8 md:mt-[2em]">
-          <Link to="/projects" className="button font-bold">Past Project</Link>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-[4em] items-center mx-auto px-4">
+    {[1, 2, 3].map((_, i) => (
+      <div className="card w-full mx-auto" key={i}>
+        <div className="content">
+          <p className="para">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+            laboriosam at voluptas minus culpa deserunt delectus sapiente
+            inventore pariatur
+          </p>
         </div>
       </div>
+    ))}
+  </div>
+  <div className="flex justify-center mt-8 md:mt-[2em]">
+    <Link to="/projects" className="button font-bold">Past Project</Link>
+  </div>
+</div>
 
       {/* Building with Intention Section */}
       <div className="flex flex-col md:flex-row bg-white px-4 md:px-[2em] py-10 md:py-[5em] gap-8">

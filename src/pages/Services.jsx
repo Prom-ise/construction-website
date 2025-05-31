@@ -37,8 +37,8 @@ const Services = () => {
       <div className="mx-auto">
         <h1 className="text-3xl mt-[2em] font-bold text-center text-[rgb(254,93,20)]">Featured Construction Services & Bookings</h1>
         <div className="mt-[3em] mb-[8em]">
-        <div className="flex flex-row justify-center items-center gap-x-5 mx-5">
-    <div className="w-4/12 service-card">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4">
+    <div className="service-card w-full">
       <div className="service-content">
         <div className="service-back">
           <div className="service-back-content">
@@ -97,7 +97,7 @@ const Services = () => {
         </div>
       </div>
     </div>
-    <div className="w-4/12 service-card">
+    <div className="service-card w-full">
       <div className="service-content">
         <div className="service-back">
           <div className="service-back-content">
@@ -155,7 +155,7 @@ const Services = () => {
         </div>
       </div>
     </div>
-    <div className="w-4/12 service-card">
+    <div className="service-card w-full">
       <div className="service-content">
         <div className="service-back">
           <div className="service-back-content">
@@ -214,8 +214,8 @@ const Services = () => {
       </div>
     </div>
         </div>
-         <div className="flex flex-row justify-center items-center gap-x-5 my-[2em] mx-5">
-    <div className="w-4/12 service-card">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4 my-[3em]">
+    <div className="service-card w-full">
       <div className="service-content">
         <div className="service-back">
           <div className="service-back-content">
@@ -273,7 +273,7 @@ const Services = () => {
         </div>
       </div>
     </div>
-    <div className="w-4/12 service-card">
+    <div className="service-card w-full">
       <div className="service-content">
         <div className="service-back">
           <div className="service-back-content">
@@ -331,7 +331,7 @@ const Services = () => {
         </div>
       </div>
     </div>
-    <div className="w-4/12 service-card">
+    <div className="service-card w-full">
       <div className="service-content">
         <div className="service-back">
           <div className="service-back-content">
@@ -390,8 +390,8 @@ const Services = () => {
       </div>
     </div>
         </div>
-         <div className="flex flex-row justify-center items-center gap-x-5 mx-5">
-    <div className="w-4/12 service-card">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4">
+    <div className="service-card w-full">
       <div className="service-content">
         <div className="service-back">
           <div className="service-back-content">
@@ -449,7 +449,7 @@ const Services = () => {
         </div>
       </div>
     </div>
-    <div className="w-4/12 service-card">
+    <div className="service-card w-full">
       <div className="service-content">
         <div className="service-back">
           <div className="service-back-content">
@@ -508,7 +508,7 @@ const Services = () => {
         </div>
       </div>
     </div>
-    <div className="w-4/12 service-card">
+    <div className="service-card w-full">
       <div className="service-content">
         <div className="service-back">
           <div className="service-back-content">
