@@ -40,11 +40,10 @@ const ProjectUploadForm = () => {
 
     try {
       await axios.post('https://construct-backend.onrender.com/api/projects/add', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-          Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
-        },
-      });
+  headers: {
+    Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
+  },
+});
 
       setTitle('');
       setDescription('');
