@@ -30,14 +30,13 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
-import "./App.css"; // Ensure you have your styles imported
+import NotFound from "./pages/NotFound";
+import "./App.css";
 
-// Utility to determine when to hide navbar/footer
 const LayoutWrapper = ({ children }) => {
   const location = useLocation();
   const hideLayout = location.pathname.startsWith("/admin");
 
-  // Optional: scroll to top on route change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
@@ -69,6 +68,7 @@ function App() {
               </ProtectedRoute>
             }
           >
+            <Route path="/admin" element={<Navigate to="/admin/dashboard" />} />
             <Route path="dashboard" element={<AdminDashboard />} />
             <Route path="bookings" element={<Bookings />} />
             <Route path="analytics" element={<Analytics />} />
@@ -85,6 +85,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="*" element={<NotFound />} /> 
         </Routes>
       </LayoutWrapper>
     </Router>
