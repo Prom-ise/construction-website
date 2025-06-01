@@ -44,8 +44,8 @@ const Projects = () => {
             <span className="text-blue-600 font-semibold text-lg">Projects loading...</span>
           </div>
         ) : projects.length === 0 ? (
-          <div className="col-span-full text-center text-gray-500 text-lg py-10">
-            No projects available.
+          <div className="col-span-full text-center font-bold text-gray-500 text-lg py-10">
+            No Projects available at the moment.
           </div>
         ) : (
           projects.map((project) => (
