@@ -122,7 +122,7 @@ const AdminLogin = () => {
             required
           />
           <button
-            className="w-full bg-blue-600 text-white p-2 rounded flex items-center justify-center"
+            className="w-full bg-[#fe5d14] text-white p-2 rounded flex items-center justify-center"
             type="submit"
             disabled={loading}
           >
@@ -148,7 +148,7 @@ const AdminLogin = () => {
           </button>
           <button
             type="button"
-            className="w-full text-blue-600 underline mt-2"
+            className="w-full text-[#fe5d14] underline mt-2"
             onClick={() => setShowReset(true)}
             disabled={loading}
           >
@@ -171,7 +171,7 @@ const AdminLogin = () => {
               />
               <button
                 type="button"
-                className="w-full bg-blue-600 text-white p-2 rounded flex items-center justify-center"
+                className="w-full bg-[#fe5d14] text-white p-2 rounded flex items-center justify-center"
                 onClick={handleSendResetCode}
                 disabled={sendCodeLoading}
               >
@@ -243,7 +243,7 @@ const AdminLogin = () => {
           )}
           <button
             type="button"
-            className="w-full text-blue-600 underline mt-2"
+            className="w-full text-[#fe5d14] underline mt-2"
             onClick={() => {
               setShowReset(false);
               setResetEmailSent(false);

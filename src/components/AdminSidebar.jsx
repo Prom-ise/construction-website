@@ -18,7 +18,7 @@ const AdminSidebar = () => {
       <NavLink
         to="/admin/dashboard"
         className={({ isActive }) =>
-          isActive ? "font-semibold text-blue-600" : "text-gray-700"
+          isActive ? "font-semibold text-[#fe5d14]" : "text-gray-700"
         }
         onClick={() => setOpen(false)}
       >
@@ -27,7 +27,7 @@ const AdminSidebar = () => {
       <NavLink
         to="/admin/bookings"
         className={({ isActive }) =>
-          isActive ? "font-semibold text-blue-600" : "text-gray-700"
+          isActive ? "font-semibold text-[#fe5d14]" : "text-gray-700"
         }
         onClick={() => setOpen(false)}
       >
@@ -36,7 +36,7 @@ const AdminSidebar = () => {
       <NavLink
         to="/admin/analytics"
         className={({ isActive }) =>
-          isActive ? "font-semibold text-blue-600" : "text-gray-700"
+          isActive ? "font-semibold text-[#fe5d14]" : "text-gray-700"
         }
         onClick={() => setOpen(false)}
       >
@@ -45,7 +45,7 @@ const AdminSidebar = () => {
       <NavLink
         to="/admin/upload-project"
         className={({ isActive }) =>
-          isActive ? "font-semibold text-blue-600" : "text-gray-700"
+          isActive ? "font-semibold text-[#fe5d14]" : "text-gray-700"
         }
         onClick={() => setOpen(false)}
       >

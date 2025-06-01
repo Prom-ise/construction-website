@@ -203,7 +203,7 @@ const ProjectUploadForm = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded transition flex items-center justify-center"
+          className="w-full bg-[#fe5d14] hover:bg-[#d3632f] text-white font-bold py-3 rounded transition flex items-center justify-center"
           disabled={loading}
         >
           {loading ? (
