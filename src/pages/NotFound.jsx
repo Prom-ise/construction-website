@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => (
   <div className="flex flex-col items-center justify-center min-h-[60vh] text-center py-16">
-    <h1 className="text-5xl font-bold text-blue-700 mb-4">404</h1>
-    <h2 className="text-2xl font-semibold mb-2">Page Not Found</h2>
-    <p className="mb-6 text-gray-600">Sorry, the page you are looking for does not exist.</p>
+    <h1 className="text-5xl font-bold text-[#fe5d14] mb-4">404</h1>
+    <h2 className="text-2xl blue-600 font-semibold mb-2">Page Not Found</h2>
+    <p className="mb-6 text-gray-600 font-semibold">Sorry, the page you are looking for does not exist.</p>
     <Link to="/" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 font-semibold transition">
       Go Home
     </Link>
