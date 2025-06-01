@@ -7,6 +7,7 @@ import axios from 'axios';
 
 const Projects = () => {
   const [projects, setProjects] = useState([])
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchProjects = async () =>{
       try {
@@ -14,10 +15,12 @@ const Projects = () => {
         setProjects(response.data);
       } catch (error) {
         console.error('Error fetching projects:', error);
+      } finally {
+        setLoading(false);
       }
     };
     fetchProjects();
-  })
+  }, []);
   return (
    <div>
       {/* Hero Section */}
@@ -32,17 +35,31 @@ const Projects = () => {
 
       {/* Projects Grid */}
       <div className="projects-container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10 px-4">
-        {projects.map((project) => (
-          <div className="cards3 bg-white rounded shadow flex flex-col" key={project._id}>
-            <div className="card3-image">
-              <img src={`https://construct-backend.onrender.com${project.image}`} alt={project.title} className="w-full h-56 object-cover rounded-t" />
-            </div>
-            <div className="category font-semibold text-lg mt-2">{project.title}</div>
-            <div className="heading text-gray-500">{project.category}</div>
-            <p className='text-black text-center'>{project.description}</p>
-            <p className='text-black text-center capitalize'>{project.status}</p>
+        {loading ? (
+          <div className="col-span-full flex flex-col items-center justify-center py-16">
+            <svg className="animate-spin h-8 w-8 text-blue-600 mb-2" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+            </svg>
+            <span className="text-blue-600 font-semibold text-lg">Projects loading...</span>
           </div>
-        ))}
+        ) : projects.length === 0 ? (
+          <div className="col-span-full text-center text-gray-500 text-lg py-10">
+            No projects available.
+          </div>
+        ) : (
+          projects.map((project) => (
+            <div className="cards3 bg-white rounded shadow flex flex-col" key={project._id}>
+              <div className="card3-image">
+                <img src={`https://construct-backend.onrender.com${project.image}`} alt={project.title} className="w-full h-56 object-cover rounded-t" />
+              </div>
+              <div className="category font-semibold text-lg mt-2">{project.title}</div>
+              <div className="heading text-gray-500">{project.category}</div>
+              <p className='text-black text-center'>{project.description}</p>
+              <p className='text-black text-center capitalize'>{project.status}</p>
+            </div>
+          ))
+        )}
       </div>
 
       {/* Call to Action Section */}
