@@ -51,7 +51,7 @@ const Projects = () => {
           projects.map((project) => (
             <div className="cards3 bg-white rounded shadow flex flex-col" key={project._id}>
               <div className="card3-image">
-                <img src={`https://construct-backend.onrender.com${project.image}`} alt={project.title} className="w-full h-56 object-cover rounded-t" />
+                <img src={project.image} alt={project.title} className="w-full h-56 object-cover rounded-t" />
               </div>
               <div className="category font-semibold text-lg mt-2">{project.title}</div>
               <div className="heading text-gray-500">{project.category}</div>

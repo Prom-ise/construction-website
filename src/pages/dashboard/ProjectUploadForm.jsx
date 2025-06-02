@@ -251,7 +251,7 @@ const ProjectUploadForm = () => {
             >
               <div className="card3-image">
                 <img
-                  src={`https://construct-backend.onrender.com${project.image}`}
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-56 object-cover rounded-t"
                 />
