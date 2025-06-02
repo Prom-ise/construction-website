@@ -148,6 +148,7 @@ const ProjectUploadForm = () => {
               <option value="Building from scratch">
                 Building from scratch
               </option>
+              <option value="Plan and Layouts">Plan and Layouts</option>
               <option value="Completing">Completing</option>
               <option value="Evaluation">Evaluation</option>
               <option value="Drainage">Drainage</option>
