@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import construct7 from "../assets/construct7.jpg";
 import construct8 from "../assets/construct8.jpg";
 import { GiHouse } from "react-icons/gi";
+import { FaBriefcase } from "react-icons/fa";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -569,6 +570,71 @@ const Services = () => {
         </div>
         </div>
       </div>
+
+
+      <div>
+        <section className="bg-white dark:bg-gray-950 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <FaBriefcase className="mx-auto h-10 w-10 text-blue-600 mb-4" />
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
+            Project Management
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            We oversee and coordinate your entire construction project from concept to completion. Get peace of mind with expert planning, supervision, and execution.
+          </p>
+        </div>
+
+        {/* Features */}
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              title: "Timeline Planning",
+              desc: "Structured schedules ensure that every milestone is met on time.",
+              icon: "🗓️",
+            },
+            {
+              title: "Budget Management",
+              desc: "We keep your project within budget by optimizing resources efficiently.",
+              icon: "💰",
+            },
+            {
+              title: "Team Coordination",
+              desc: "We handle communication across contractors, suppliers, and stakeholders.",
+              icon: "👥",
+            },
+            {
+              title: "Site Supervision",
+              desc: "On-ground presence ensures quality work and risk mitigation.",
+              icon: "🏗️",
+            },
+            {
+              title: "Progress Tracking",
+              desc: "You’ll receive transparent updates and performance insights.",
+              icon: "📈",
+            },
+            {
+              title: "Client Support",
+              desc: "We’re available for your questions and decisions, every step of the way.",
+              icon: "📞",
+            },
+          ].map((feature, index) => (
+            <div
+              key={index}
+              className="p-6 rounded-2xl shadow-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-xl transition"
+            >
+              <div className="text-4xl mb-4">{feature.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+                {feature.title}
+              </h3>
+              <p className="mt-2 text-gray-600 dark:text-gray-400">{feature.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    </div>
     </div>
   );
 };
