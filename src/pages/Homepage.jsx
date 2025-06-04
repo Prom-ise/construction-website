@@ -52,7 +52,8 @@ const Homepage = () => {
                 <MdRealEstateAgent className="text-[#fe5d14]" />
               </div>
               <p className="para font-semibold text-gray-300">
-                Did you ever want to own a property? Every real property began as a dream in the mind of its owner. What do you own today?
+                Did you ever want to own a property? Every real property began
+                as a dream in the mind of its owner. What do you own today?
               </p>
             </div>
           </div>
@@ -64,7 +65,8 @@ const Homepage = () => {
                 <FaThinkPeaks className="text-[#fe5d14]" />
               </div>
               <p className="para font-semibold text-gray-300">
-                Ownership comes with decision-making. Take a seat—how do you want to make yourself an owner?
+                Ownership comes with decision-making. Take a seat—how do you
+                want to make yourself an owner?
               </p>
             </div>
           </div>
@@ -76,7 +78,9 @@ const Homepage = () => {
                 <MdOutlineNextPlan className="text-[#fe5d14]" />
               </div>
               <p className="para font-semibold text-gray-300">
-                From putting the structure on paper to placing the bricks one after the other, Bumia Construction Company Limited is like no other. What are you waiting for? Let's build your dream next!
+                From putting the structure on paper to placing the bricks one
+                after the other, Bumia Construction Company Limited is like no
+                other. What are you waiting for? Let's build your dream next!
               </p>
             </div>
           </div>
@@ -88,7 +92,8 @@ const Homepage = () => {
                 <FaBuilding className="text-[#fe5d14]" />
               </div>
               <p className="para font-semibold text-gray-300">
-                Don't just build to own. Build with value, quality, and integrity to enjoy comfort and peace of mind.
+                Don't just build to own. Build with value, quality, and
+                integrity to enjoy comfort and peace of mind.
               </p>
             </div>
           </div>
@@ -107,18 +112,20 @@ const Homepage = () => {
             Building with Intention
           </h1>
           <p className="text-black mt-2">
-            Bumia construction company limited is a THINK TANK of civil
-            engineers, architects, town planners, surveyors, mechanical
-            engineer, quantity surveyor, electrical engineer, builders,
-            equipment to carry out all necessary operation, painters, interior
-            decorators, carpenters focused on providing you with a top-notch
-            service
+            Bumia Construction Company Limited is a think tank of civil
+            engineers, architects, town planners, surveyors, mechanical and
+            electrical engineers, quantity surveyors, builders, painters,
+            interior decorators, and carpenters—all equipped with the expertise
+            and tools to deliver exceptional results. Our team is dedicated to
+            providing you with top-notch service, ensuring every project is
+            handled with precision, creativity, and care.
           </p>
           <p className="text-black mt-4">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
-            tempora illo necessitatibus aut ad quae aliquid modi autem adipisci
-            esse blanditiis voluptas, vero a quas ratione ea explicabo! Nemo,
-            quibusdam?
+            Whether you’re dreaming of a new home, a commercial space, or a
+            community development, we turn your vision into reality with quality
+            craftsmanship and innovative solutions. At Bumia, we don’t just
+            build structures—we build trust, comfort, and lasting value for
+            every client.
           </p>
           <Link to="/about" className="button font-bold mt-4">
             About Us

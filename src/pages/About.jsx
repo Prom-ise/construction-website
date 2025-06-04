@@ -3,6 +3,15 @@ import construct4 from "../assets/construct4.jpg"
 import construct2 from "../assets/construct2.jpg"
 import profile from "../assets/profile.jpg"
 
+const teamMembers = [
+  { name: 'John Doe', role: 'Founder' },
+  { name: 'Jane Smith', role: 'Project Manager' },
+  { name: 'Alice Johnson', role: 'Engineer' },
+  { name: 'Michael Brown', role: 'Architect' },
+  { name: 'Laura Wilson', role: 'Coordinator' },
+  { name: 'James Lee', role: 'Supervisor' },
+];
+
 const About = () => {
   return (
     <div>
@@ -31,28 +40,28 @@ const About = () => {
       <div className="container mb-10 text-black mx-auto px-4 md:px-[3em]">
         <h1 className='text-2xl md:text-3xl my-10 font-bold text-center pt-8 pb-4'>Our People</h1>
         
-        <div className='flex flex-col md:flex-row gap-6 w-full justify-center items-center mt-10'>
-          {[1, 2, 3].map((_, i) => (
-            <div className="card2 flex flex-col items-center md:w-4/12 w-full bg-white rounded shadow p-4" key={i}>
-              <div className="card2-image mb-2">
-                <img src={profile} alt="pfile img.." className="rounded-full w-28 h-28 object-cover" />
-              </div>
-              <div className="category font-semibold">John Doe</div>
-              <div className="heading text-gray-500">Founder</div>
+        <div className="w-full px-4 py-10 bg-gray-100">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4">
+          {teamMembers.map((member, index) => (
+            <div
+              className="bg-white dark:bg-[#131944] rounded-xl shadow-md p-4 flex flex-col items-center text-center transition hover:shadow-xl"
+              key={index}
+            >
+              <img
+                src={profile}
+                alt={member.name}
+                className="rounded-full w-44 h-46 object-cover mb-4"
+              />
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+                {member.name}
+              </h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">{member.role}</p>
             </div>
           ))}
         </div>
-        <div className='flex flex-col md:flex-row gap-6 w-full justify-center items-center mt-10'>
-          {[1, 2, 3].map((_, i) => (
-            <div className="card2 flex flex-col items-center md:w-4/12 w-full bg-white rounded shadow p-4" key={i}>
-              <div className="card2-image mb-2">
-                <img src={profile} alt="pfile img.." className="rounded-full w-28 h-28 object-cover" />
-              </div>
-              <div className="category font-semibold">John Doe</div>
-              <div className="heading text-gray-500">Founder</div>
-            </div>
-          ))}
-        </div>
+      </div>
+    </div>
       </div>
 
       <div className="flex flex-col md:flex-row bg-white px-4 md:px-[2em] py-10 md:py-[5em] gap-8 md:gap-0">

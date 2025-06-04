@@ -49,15 +49,37 @@ const Projects = () => {
           </div>
         ) : (
           projects.map((project) => (
-            <div className="cards3 bg-white rounded shadow flex flex-col" key={project._id}>
-              <div className="card3-image">
-                <img src={project.image} alt={project.title} className="w-full h-56 object-cover rounded-t" />
-              </div>
-              <div className="category font-semibold text-lg mt-2">{project.title}</div>
-              <div className="heading text-gray-500">{project.category}</div>
-              <p className='text-black text-center'>{project.description}</p>
-              <p className='text-black text-center capitalize'>{project.status}</p>
-            </div>
+           <div
+  className="bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-xl transition duration-300 flex flex-col overflow-hidden"
+  key={project._id}
+>
+  <div className="w-full h-56 overflow-hidden">
+    <img
+      src={project.image}
+      alt={project.title}
+      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+    />
+  </div>
+
+  <div className="p-5 flex flex-col gap-2 text-center">
+    <h3 className="text-xl font-bold text-gray-800 dark:text-white">{project.title}</h3>
+    <span className="text-sm text-[#fe5d14] font-medium tracking-wide uppercase">
+      {project.category}
+    </span>
+    <p className="text-gray-600 dark:text-gray-300 text-sm">{project.description}</p>
+    <p
+      className={`text-sm font-semibold mt-2 ${
+        project.status.toLowerCase() === 'completed'
+          ? 'text-green-600'
+          : project.status.toLowerCase() === 'in progress'
+          ? 'text-yellow-600'
+          : 'text-red-600'
+      } capitalize`}
+    >
+      {project.status}
+    </p>
+  </div>
+</div>
           ))
         )}
       </div>
