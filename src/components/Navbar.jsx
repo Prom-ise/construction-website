@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="navbar bg-white shadow-md px-4 py-3 flex items-center justify-between relative z-50">
       {/* Logo */}
-      <div className='logo text-[rgb(254,93,20)] font-bold text-xl'>Dev_Promise</div>
+      <div className='logo text-[rgb(254,93,20)] font-bold text-xl'>Bumia co lmt</div>
 
       {/* Hamburger for mobile */}
       <button
