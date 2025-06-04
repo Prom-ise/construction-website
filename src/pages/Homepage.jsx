@@ -47,7 +47,7 @@ const Homepage = () => {
                 <h1 className="font-bold">DREAM</h1>
                 <MdRealEstateAgent className="text-[#fe5d14]" />
               </div>
-              <p className="para text-gray-300">
+              <p className="para font-semibold text-gray-300">
                 Did you want to own a property and…… All real properties started
                 with the dream of their owners today. What do you own?
               </p>
@@ -60,7 +60,7 @@ const Homepage = () => {
                 <h1 className="font-bold">THINK</h1>
                 <FaThinkPeaks className="text-[#fe5d14]" />
               </div>
-              <p className="para">
+              <p className="para font-semibold text-gray-300">
                 Ownership comes with decisions making, take a sit how do you
                 want to make yourself an owner?
               </p>
@@ -73,7 +73,7 @@ const Homepage = () => {
                 <h1 className="font-bold">PLAN</h1>
                 <MdOutlineNextPlan className="text-[#fe5d14]" />
               </div>
-              <p className="para">
+              <p className="para font-semibold text-gray-300">
                 How do you From putting the structure on paper to placing the
                 bricks on the other, Bumia construction company limited is like
                 no other, what are you waiting for Let’s do you next!
@@ -87,7 +87,7 @@ const Homepage = () => {
                 <h1 className="font-bold">BUILD</h1>
                 <FaBuilding className="text-[#fe5d14]" />
               </div>
-              <p className="para">
+              <p className="para font-semibold text-gray-300">
                 Don’t just build to own Build with value, validity, quality to
                 enjoy comfort with serenity
               </p>
