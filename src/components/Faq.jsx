@@ -8,7 +8,9 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
       onClick={onClick}
       className="w-full text-black flex justify-between items-center text-left py-4 px-2 md:px-4 transition"
     >
-      <span className="text-lg font-medium text-[rgb(254,93,20)]">{question}</span>
+      <span className="text-lg font-medium text-[rgb(254,93,20)]">
+        {question}
+      </span>
       {isOpen ? <FaMinus size={20} /> : <FaPlus size={20} />}
     </button>
     <div
@@ -24,22 +26,29 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
 const FAQSection = () => {
   const faqs = [
     {
-      question: "What is this app about?",
+      question: "What is the first step in construction?",
       answer:
         "This app helps you manage your tasks efficiently with a simple, intuitive interface.",
     },
     {
-      question: "Is it mobile-friendly?",
+      question: "What are your past projects?",
       answer: "Yes, it's fully responsive and works great on all devices.",
     },
     {
-      question: "How can I get support?",
+      question: "How long have you been existing?",
       answer: "You can contact us via the support page or email us anytime.",
     },
     {
-        question: "Can I start a project?",
-        answer: "You can contact us via the support page to start a project anytime.",
-      },
+      question: "How can build with low cost and achieve premium quality?",
+      answer:
+        "You can contact us via the support page to start a project anytime.",
+    },
+    {
+      question:
+        "What is the difference btw German floor and normal foundation?",
+      answer:
+        "You can contact us via the support page to start a project anytime.",
+    },
   ];
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -51,16 +60,15 @@ const FAQSection = () => {
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
       <div className="space-y-2">
-      {faqs.map((faq, index) => (
-  <div key={index} className="mb-[2em]">
-    <FAQItem
-      {...faq}
-      isOpen={openIndex === index}
-      onClick={() => handleClick(index)}
-    />
-  </div>
-))}
-
+        {faqs.map((faq, index) => (
+          <div key={index} className="mb-[2em]">
+            <FAQItem
+              {...faq}
+              isOpen={openIndex === index}
+              onClick={() => handleClick(index)}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

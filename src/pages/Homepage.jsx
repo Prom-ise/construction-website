@@ -24,7 +24,7 @@ const Homepage = () => {
           </h1>
           <p>
             Dream, think, plan, build Building your own dream to durability; at
-            what stage of building can you? Let’s build you an ediphs you’d love
+            what stage of building can you? Let's build you an ediphs you'd love
             happily ever after. Bumia construction company limited is here to
             make your dream come true, from the foundation to the roof, we are
             here to make your dream come true.
@@ -41,7 +41,9 @@ const Homepage = () => {
 
       {/* Cards Section */}
       <div className="my-10 md:my-[5em]">
-        <h1 className="text-center text-3xl mb-[1.5em] font-bold text-[#fe5d14]">Road to Ownership</h1>
+        <h1 className="text-center text-3xl mb-[1.5em] font-bold text-[#fe5d14]">
+          Road to Ownership
+        </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4">
           <div className="card w-full mx-auto">
             <div className="content">
@@ -50,8 +52,7 @@ const Homepage = () => {
                 <MdRealEstateAgent className="text-[#fe5d14]" />
               </div>
               <p className="para font-semibold text-gray-300">
-                Did you want to own a property and…… All real properties started
-                with the dream of their owners today. What do you own?
+                Did you ever want to own a property? Every real property began as a dream in the mind of its owner. What do you own today?
               </p>
             </div>
           </div>
@@ -63,8 +64,7 @@ const Homepage = () => {
                 <FaThinkPeaks className="text-[#fe5d14]" />
               </div>
               <p className="para font-semibold text-gray-300">
-                Ownership comes with decisions making, take a sit how do you
-                want to make yourself an owner?
+                Ownership comes with decision-making. Take a seat—how do you want to make yourself an owner?
               </p>
             </div>
           </div>
@@ -76,9 +76,7 @@ const Homepage = () => {
                 <MdOutlineNextPlan className="text-[#fe5d14]" />
               </div>
               <p className="para font-semibold text-gray-300">
-                How do you From putting the structure on paper to placing the
-                bricks on the other, Bumia construction company limited is like
-                no other, what are you waiting for Let’s do you next!
+                From putting the structure on paper to placing the bricks one after the other, Bumia Construction Company Limited is like no other. What are you waiting for? Let's build your dream next!
               </p>
             </div>
           </div>
@@ -90,8 +88,7 @@ const Homepage = () => {
                 <FaBuilding className="text-[#fe5d14]" />
               </div>
               <p className="para font-semibold text-gray-300">
-                Don’t just build to own Build with value, validity, quality to
-                enjoy comfort with serenity
+                Don't just build to own. Build with value, quality, and integrity to enjoy comfort and peace of mind.
               </p>
             </div>
           </div>
@@ -110,9 +107,12 @@ const Homepage = () => {
             Building with Intention
           </h1>
           <p className="text-black mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis culpa
-            deleniti rem et voluptate incidunt sapiente fugit ipsa autem dolorem
-            ea quam, mollitia corporis vel ad illo quisquam nobis quo.
+            Bumia construction company limited is a THINK TANK of civil
+            engineers, architects, town planners, surveyors, mechanical
+            engineer, quantity surveyor, electrical engineer, builders,
+            equipment to carry out all necessary operation, painters, interior
+            decorators, carpenters focused on providing you with a top-notch
+            service
           </p>
           <p className="text-black mt-4">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
