@@ -17,16 +17,17 @@ const Homepage = () => {
       >
         <div className="subSect1 w-full md:w-5/12 p-8 text-white z-10">
           <p className="text-[rgb(254,93,20)] font-bold">
-            Dev_Promise Construction
+            Bumia co lmt - Construction Company
           </p>
           <h1 className="text-3xl md:text-6xl font-bold mb-4">
-            Building contractor & timber systems specialists
+            Turning Dreams Into Durable Realities
           </h1>
           <p>
-            We undertake projects of all shapes and sizes - each and every one
-            of which is treated with the same core values that characterise our
-            company - honesty, integrity, professional advice and quality
-            craftmanship.
+            Dream, think, plan, build Building your own dream to durability; at
+            what stage of building can you? Let’s build you an ediphs you’d love
+            happily ever after. Bumia construction company limited is here to
+            make your dream come true, from the foundation to the roof, we are
+            here to make your dream come true.
           </p>
           <div className="mt-4">
             <Link to="/about" className="button">

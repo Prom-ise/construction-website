@@ -39,7 +39,7 @@ const Footer = () => {
 
       <div className='flex flex-col md:flex-row justify-between items-center bg-[rgb(19,25,68)] mx-3 rounded-2xl px-4 py-4 gap-4 md:gap-0'>
         <a
-          href="tel:+23481000659398"
+          href="tel:+905488216001"
           className='flex font-bold justify-between items-center bg-[rgb(254,93,20)] text-white p-2 rounded-md w-full md:w-[300px] mx-auto my-3 hover:opacity-90 transition-all duration-300'
         >
           <div className='text-4xl bg-white rounded-full p-3 text-[navy] mr-3'>
@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
           <div>
             <div>Call Today!</div>
-            <div>(+234) 810 0065 9398</div>
+            <div>(+90) 548 821 6001</div>
           </div>
         </a>
         <div className='flex justify-center items-center text-3xl space-x-2 text-[rgb(254,93,20)] my-3'>
