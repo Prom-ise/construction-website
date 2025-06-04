@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
+import construct3 from "../assets/construct3.jpg";
 import construct7 from "../assets/construct7.jpg";
 import construct8 from "../assets/construct8.jpg";
 import { GiHouse } from "react-icons/gi";
@@ -635,6 +636,24 @@ const Services = () => {
       </div>
     </section>
     </div>
+    
+     {/* Call to Action Section */}
+          <div
+            className="relative px-4 md:p-[3em] w-full bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${construct3})` }}
+          >
+            <div className="absolute inset-0 bg-black opacity-60"></div>
+            <div className="relative z-10 py-10 md:py-0">
+              <h1 className="text-center text-2xl md:text-4xl text-[rgb(254,93,20)] font-bold">
+                Ready to Discuss your Next Project?
+              </h1>
+              <div className="flex justify-center my-5">
+                <Link to="/contact" className="get-in font-bold">
+                  Get in Touch
+                </Link>
+              </div>
+            </div>
+          </div>
     </div>
   );
 };

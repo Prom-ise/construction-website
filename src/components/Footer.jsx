@@ -40,45 +40,57 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col md:flex-row justify-between items-center bg-[rgb(19,25,68)] mx-3 rounded-2xl px-4 py-4 gap-4 md:gap-0">
-        <a
-          href="tel:+905488216001"
-          className="flex font-bold justify-between items-center bg-[rgb(254,93,20)] text-white p-2 rounded-md w-full md:w-[300px] mx-auto my-3 hover:opacity-90 transition-all duration-300"
-        >
-          <div className="text-4xl bg-white rounded-full p-3 text-[navy] mr-3">
-            <IoMdCall />
-          </div>
-          <div>
-            <div>Call Today!</div>
-            <div>(+90) 548 821 6001</div>
-          </div>
-        </a>
-        <div className="flex justify-center items-center text-3xl space-x-2 text-[rgb(254,93,20)] my-3">
-          <a
-            href="https://facebook.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white rounded-full p-2 hover:text-[navy] transition-all duration-300 cursor-pointer"
-          >
-            <FaFacebookF />
-          </a>
-          <a
-            href="https://instagram.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white rounded-full p-2 hover:text-[navy] transition-all duration-300 cursor-pointer"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="https://linkedin.com/in/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white rounded-full p-2 hover:text-[navy] transition-all duration-300 cursor-pointer"
-          >
-            <FaLinkedinIn />
-          </a>
+  {/* Phone Numbers */}
+  <div className="flex w-full md:w-auto gap-3 overflow-x-auto scrollbar-hide">
+    {[
+      { label: "Call Today!", number: "+90 548 821 6001" },
+      { label: "Office", number: "+234 706 708 1269" },
+      { label: "Support", number: "+234 703 274 1306" },
+      { label: "WhatsApp", number: "+234 813 254 9469" },
+    ].map((item, idx) => (
+      <a
+        key={idx}
+        href={`tel:${item.number.replace(/\s+/g, '')}`}
+        className="flex items-center bg-[rgb(254,93,20)] text-white rounded-md px-3 py-2 min-w-[220px] shadow hover:opacity-90 transition-all duration-300"
+      >
+        <div className="text-2xl bg-white rounded-full p-2 text-[navy] mr-2">
+          <IoMdCall />
         </div>
-      </div>
+        <div>
+          <div className="text-xs font-semibold">{item.label}</div>
+          <div className="text-sm font-bold">{item.number}</div>
+        </div>
+      </a>
+    ))}
+  </div>
+  {/* Socials */}
+  <div className="flex justify-center items-center text-3xl space-x-2 text-[rgb(254,93,20)] my-3">
+    <a
+      href="https://facebook.com/yourusername"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-white rounded-full p-2 hover:text-[navy] transition-all duration-300 cursor-pointer"
+    >
+      <FaFacebookF />
+    </a>
+    <a
+      href="https://instagram.com/yourusername"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-white rounded-full p-2 hover:text-[navy] transition-all duration-300 cursor-pointer"
+    >
+      <FaInstagram />
+    </a>
+    <a
+      href="https://linkedin.com/in/yourusername"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-white rounded-full p-2 hover:text-[navy] transition-all duration-300 cursor-pointer"
+    >
+      <FaLinkedinIn />
+    </a>
+  </div>
+</div>
 
       {/* Privacy/Terms */}
       <div className="flex flex-wrap justify-center my-3 items-center gap-4">
