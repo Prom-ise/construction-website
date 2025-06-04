@@ -22,7 +22,7 @@ const Footer = () => {
         {NavLinks.map((link) => (
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-blue-600 font-semibold" : "text-white font-semibold"
+              isActive ? "text-blue-600 font-semibold !underline" : "text-white font-semibold"
             }
             key={link.name}
             to={link.path}
@@ -83,7 +83,7 @@ const Footer = () => {
         {NavLinked.map((link) => (
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-blue-600 font-semibold" : "text-white font-semibold"
+              isActive ? "text-blue-600 font-semibold underline" : "text-white font-semibold"
             }
             key={link.name}
             to={link.path}
