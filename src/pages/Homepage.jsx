@@ -26,7 +26,7 @@ const Homepage = () => {
           style={{ backgroundImage: `url(${heroImages[currentIndex]})` }}></div>
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <div className="relative z-20 flex flex-col md:flex-row w-full h-full items-center justify-between p-8 text-white">
-          <div className="subSect w-full md:w-6/12">
+          <div className="mt-[4em] w-full md:w-6/12">
             <p className="text-[rgb(254,93,20)] font-bold text-lg md:text-xl mb-2">
               Bumia co lmt - Construction Company
             </p>
@@ -58,8 +58,8 @@ const Homepage = () => {
             <div
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full cursor-pointer border-2 border-white transition-all duration-300 ${
-                currentIndex === index ? "bg-white" : "bg-transparent"
+              className={`w-3 h-3 rounded-full cursor-pointer border-2 border-[rgb(254,93,20)] transition-all duration-300 ${
+                currentIndex === index ? "bg-[rgb(254,93,20)]" : "bg-transparent"
               }`}
             ></div>
           ))}
