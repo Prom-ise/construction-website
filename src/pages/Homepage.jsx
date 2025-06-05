@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Faq from "../components/Faq.jsx";
 import construct1 from "../assets/construct1.jpg";
@@ -7,36 +7,63 @@ import construct3 from "../assets/construct3.jpg";
 import { MdRealEstateAgent, MdOutlineNextPlan } from "react-icons/md";
 import { FaThinkPeaks, FaBuilding } from "react-icons/fa";
 
+const heroImages = [construct1, construct2, construct3];
 const Homepage = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="Homepage">
-      {/* Hero Section */}
-      <div
-        className="section1 flex flex-col md:flex-row w-full bg-cover bg-center bg-no-repeat relative"
-        style={{ backgroundImage: `url(${construct1})` }}
-      >
-        <div className="subSect1 w-full md:w-5/12 p-8 text-white z-10">
-          <p className="text-[rgb(254,93,20)] font-bold">
-            Bumia co lmt - Construction Company
-          </p>
-          <h1 className="text-3xl md:text-6xl font-bold mb-4">
-            Turning Dreams Into Durable Realities
-          </h1>
-          <p>
-            Dream, think, plan, build Building your own dream to durability; at
-            what stage of building can you? Let's build you an ediphs you'd love
-            happily ever after. Bumia construction company limited is here to
-            make your dream come true, from the foundation to the roof, we are
-            here to make your dream come true.
-          </p>
-          <div className="mt-4">
-            <Link to="/about" className="button">
-              Learn More
-            </Link>
+      <div className="relative w-full h-[100dvh] overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
+          style={{ backgroundImage: `url(${heroImages[currentIndex]})` }}></div>
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
+        <div className="relative z-20 flex flex-col md:flex-row w-full h-full items-center justify-between p-8 text-white">
+          <div className="subSect w-full md:w-6/12">
+            <p className="text-[rgb(254,93,20)] font-bold text-lg md:text-xl mb-2">
+              Bumia co lmt - Construction Company
+            </p>
+            <h1 className="text-3xl md:text-6xl font-bold mb-4">
+              Turning Dreams Into Durable Realities
+            </h1>
+            <p className="text-sm md:text-base leading-relaxed">
+              Dream, think, plan, build Building your own dream to durability;
+              at what stage of building can you? Let's build you an ediphs you'd
+              love happily ever after. Bumia construction company limited is
+              here to make your dream come true, from the foundation to the
+              roof, we are here to make your dream come true.
+            </p>
+            <div className="mt-6">
+              <Link to="/about" className="button">
+                Learn More
+              </Link>
+            </div>
+          </div>
+
+          <div className="hidden md:flex md:w-5/12 items-center justify-center">
+            {/* Reserved for future right-side content */}
           </div>
         </div>
-        <div className="arrows w-full md:w-7/12 flex items-center justify-end p-8 gap-4"></div>
-        <div className="absolute inset-0 bg-black/30 md:bg-transparent"></div>
+
+        {/* Image indicators */}
+        <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 z-30 flex gap-2">
+          {heroImages.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full cursor-pointer border-2 border-white transition-all duration-300 ${
+                currentIndex === index ? "bg-white" : "bg-transparent"
+              }`}
+            ></div>
+          ))}
+        </div>
       </div>
 
       {/* Cards Section */}

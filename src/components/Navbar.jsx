@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink } from "react-router-dom";
 import { MdMenu, MdClose } from "react-icons/md";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const NavLinks = [
     { name: "Homepage", path: "/" },
@@ -13,8 +14,28 @@ const Navbar = () => {
     { name: "Contact", path: "/contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Disable body scroll when mobile menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
   return (
-    <nav className="navbar bg-white shadow-md px-4 py-3 flex items-center justify-between relative z-50">
+    <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
       {/* Logo */}
       <div className='logo text-[rgb(254,93,20)] font-bold text-xl'>Bumia co lmt</div>
 
@@ -30,7 +51,7 @@ const Navbar = () => {
       {/* Links */}
       <div
         className={`
-          fixed top-0 right-0 h-full w-2/3 max-w-xs bg-white shadow-lg transition-transform duration-300
+          fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white shadow-lg transition-transform duration-300
           ${open ? "translate-x-0" : "translate-x-full"}
           md:static md:h-auto md:w-auto md:max-w-none md:bg-transparent md:shadow-none md:translate-x-0
           flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-5 p-8 md:p-0

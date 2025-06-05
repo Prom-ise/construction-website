@@ -4,22 +4,53 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
 }
-.navbar{
-    position: sticky;
+.navbar {
+    position: fixed;
     top: 0;
-    bottom: 0;
-    background-color: #ffffff;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px !important;
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
-    /* margin: 0; */
-    padding: 27px 10px; 
+    padding: 18px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 0px 10px 0px #000000;
+    background: transparent;
+    box-shadow: none;
     z-index: 100;
+    transition: background 0.4s, box-shadow 0.4s, transform 0.4s;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 14px 6px;
+    font-size: 17px;
+  }
+}
+
+/* When scrolled */
+.navbar.scrolled {
+    background: white;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 20px 0px #00000022;
+    transform: translateY(-2px);
+    animation: dropdown 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes dropdown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-2px);
+        opacity: 1;
+    }
+}
+
 .navbar .logo{
     font-size: 20px;
     font-weight: bold;
