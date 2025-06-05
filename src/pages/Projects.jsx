@@ -29,7 +29,7 @@ const Projects = () => {
         style={{ backgroundImage: `url(${construct5})` }}>
         <div className='absolute inset-0 bg-black/60'></div>
         <div className='relative z-10'>
-          <h1 className='text-3xl md:text-6xl font-bold text-center text-white py-16 md:p-[3em]'>Projects</h1>
+          <h1 className='text-3xl md:text-6xl pt-[3em] font-bold text-center text-white py-16 md:p-[3em]'>Projects</h1>
         </div>
       </div>
 

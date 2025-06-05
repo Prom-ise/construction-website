@@ -12,9 +12,9 @@ const Services = () => {
   return (
     <div>
       <div
-        className="w-full bg-cover px-[4em] py-[6em] bg-center bg-no-repeat relative"
-        style={{ backgroundImage: `url(${construct7})` }}
-      >
+            className=" w-full bg-cover py-[5em] px-2 md:p-[4em] bg-center bg-no-repeat relative"
+            style={{ backgroundImage: `url(${construct7})` }}
+          >
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10">
           <h1 className="text-6xl md:text-6xl font-bold text-start text-white">Services</h1>

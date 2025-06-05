@@ -51,7 +51,7 @@ const Contact = () => {
   <div>
     {/* Header Section */}
     <div
-      className="w-full bg-cover py-16 md:p-[4em] bg-center bg-no-repeat relative"
+      className=" w-full bg-cover py-[5em] px-2 md:p-[4em] bg-center bg-no-repeat relative"
       style={{ backgroundImage: `url(${construct6})` }}
     >
       <div className="absolute inset-0 bg-black/60"></div>
