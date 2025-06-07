@@ -398,7 +398,7 @@ const Services = () => {
         <div className="service-back">
           <div className="service-back-content">
             <div className="service-icon"><GiHouse /></div>
-            <strong>Shops, malls,mart, complexes </strong>
+            <strong>Shops, malls, mart, complexes </strong>
           </div>
         </div>
 
