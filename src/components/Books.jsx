@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import construct8 from "../assets/construct8.jpg";
+
+const bgImages = {
+  "Shops, malls,mart, complexes": construct8,
+  "Bridges": construct8,
+  "Warehouses, Pens, and farmhouses": construct8,
+}
 
 const Book = () => {
   const location = useLocation();
@@ -62,7 +69,20 @@ const Book = () => {
     }
   };
 
+  const bgImage = bgImages[projectType];
+
   return (
+    <div
+    className="min-h-screen w-full flex items-center justify-center"
+    style={{
+      backgroundImage: bgImage ? `url(${bgImage})` : "none",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      minHeight: "100vh",
+      width: "100vw",
+    }}
+  >
     <div className="p-6 max-w-xl mt-[5em] mx-auto my-10 bg-white text-black shadow rounded">
       <h2 className="text-xl font-bold mb-4">Book: {projectType}</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -132,6 +152,7 @@ const Book = () => {
           <p className="text-red-600 mt-2">Incorrect answer. Please try again.</p>
         )}
       </form>
+    </div>
     </div>
   );
 };
