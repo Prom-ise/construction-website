@@ -56,7 +56,7 @@ const Contact = () => {
     >
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="relative z-10">
-        <h1 className="text-3xl md:text-6xl font-bold text-start text-white">Contact Us</h1>
+        <h1 className="text-3xl md:text-6xl mt-[2em] font-bold text-start text-white">Contact Us</h1>
         <h3 className="text-white text-base md:text-lg">Get in touch with us about your next construction project</h3>
       </div>
     </div>
