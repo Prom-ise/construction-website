@@ -1,3 +1,4 @@
+import useAdminAuth from "../hooks/UseAdminAuth";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import {
@@ -5,6 +6,7 @@ import {
 } from "recharts";
 
 const Analytics = () => {
+  useAdminAuth();
   const [data, setData] = useState([]);
   const [summary, setSummary] = useState({ total: 0, completed: 0, pending: 0 });
   const token = localStorage.getItem("adminToken");

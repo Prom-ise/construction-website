@@ -36,6 +36,7 @@ const AdminLogin = () => {
         return;
       }
       localStorage.setItem("adminToken", data.token);
+      localStorage.setItem("adminLoginTime", Date.now().toString());
       navigate("/admin/dashboard");
     } catch (err) {
       setError("Something went wrong");

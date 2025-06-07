@@ -1,7 +1,9 @@
+import useAdminAuth from "../hooks/UseAdminAuth";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const DashboardHome = () => {
+  useAdminAuth();
   const [stats, setStats] = useState({ total: 0, completed: 0, pending: 0 });
 
   useEffect(() => {

@@ -1,7 +1,9 @@
+import useAdminAuth from "../hooks/UseAdminAuth";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Bookings = () => {
+  useAdminAuth();
   const [bookings, setBookings] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [searchService, setSearchService] = useState("");
