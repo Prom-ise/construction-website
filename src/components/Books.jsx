@@ -83,7 +83,9 @@ const Book = () => {
       width: "100vw",
     }}
   >
-    <div className="p-6 max-w-xl mt-[5em] mx-auto my-10 bg-white text-black shadow rounded">
+    <div className='absolute inset-0 bg-black/60'></div>
+    <div className="relative z-10">
+      <div className="p-6 max-w-xl mt-[5em] mx-auto my-10 bg-white text-black shadow rounded">
       <h2 className="text-xl font-bold mb-4">Book: {projectType}</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
@@ -152,6 +154,7 @@ const Book = () => {
           <p className="text-red-600 mt-2">Incorrect answer. Please try again.</p>
         )}
       </form>
+    </div>
     </div>
     </div>
   );
