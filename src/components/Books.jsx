@@ -96,7 +96,7 @@ const Book = () => {
         />
 
         <div className="flex items-center space-x-2">
-          <label className="text-sm">
+          <label className="text-sm font-semibold">
             What is {num1} + {num2}? (to verify you're human)
           </label>
           <input
@@ -110,7 +110,7 @@ const Book = () => {
 
         <button
           type="submit"
-          className="w-full bg-green-600 text-white p-2 rounded"
+          className="w-full bg-[#fe5d14] text-white p-2 rounded hover:bg-[#f7763a] hover:transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === "loading" ? "Submitting..." : "Submit Booking"}
         </button>
