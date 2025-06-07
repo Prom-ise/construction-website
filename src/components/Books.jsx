@@ -24,6 +24,13 @@ const Book = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  useEffect(() => {
+    if (status) {
+      const timer = setTimeout(() => setStatus(""), 10000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
