@@ -12,7 +12,7 @@ const Footer = () => {
     { name: "Contact", path: "/contact" },
   ];
   const NavLinked = [
-    { name: "Priavcy", path: "/privacy" },
+    { name: "Privacy", path: "/privacy" },
     { name: "Terms & Conditions", path: "/terms" },
   ];
   return (
