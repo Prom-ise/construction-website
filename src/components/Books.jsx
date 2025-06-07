@@ -3,7 +3,12 @@ import { useLocation } from "react-router-dom";
 import construct8 from "../assets/construct8.jpg";
 
 const bgImages = {
-  "Shops, malls,mart, complexes": construct8,
+  "Building from scratch": construct8,
+  "Completing": construct8,
+  "Evaluation": construct8,
+  "Drainage": construct8,
+  "Road": construct8,
+  "Shops, malls, mart, complexes": construct8,
   "Bridges": construct8,
   "Warehouses, Pens, and farmhouses": construct8,
 }
