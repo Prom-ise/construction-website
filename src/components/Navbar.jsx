@@ -45,6 +45,9 @@ const Navbar = () => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          boxShadow: scrolled
+      ? "0 4px 24px 0 rgba(0,0,0,0.12), 0 1.5px 4px 0 rgba(0,0,0,0.10)"
+      : "none",
         }}
       >
         {/* Logo */}

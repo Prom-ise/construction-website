@@ -78,6 +78,9 @@ const Homepage = () => {
                 <h1 className="font-bold">DREAM</h1>
                 <MdRealEstateAgent className="text-[#fe5d14]" />
               </div>
+              <div>
+                <img className="rounded" src={construct2} alt="dream img.." />
+              </div>
               <p className="para font-semibold text-gray-300">
                 Did you ever want to own a property? Every real property began
                 as a dream in the mind of its owner. What do you own today?
@@ -90,6 +93,9 @@ const Homepage = () => {
               <div className="flex justify-center items-center mb-[-1em] mt-[-.7em] gap-2">
                 <h1 className="font-bold">THINK</h1>
                 <FaThinkPeaks className="text-[#fe5d14]" />
+              </div>
+               <div>
+                <img className="rounded" src={construct2} alt="dream img.." />
               </div>
               <p className="para font-semibold text-gray-300">
                 Ownership comes with decision-making. Take a seat—how do you
@@ -104,6 +110,9 @@ const Homepage = () => {
                 <h1 className="font-bold">PLAN</h1>
                 <MdOutlineNextPlan className="text-[#fe5d14]" />
               </div>
+               <div>
+                <img className="rounded" src={construct2} alt="dream img.." />
+              </div>
               <p className="para font-semibold text-gray-300">
                 From putting the structure on paper to placing the bricks one
                 after the other, Bumia Construction Company Limited is like no
@@ -117,6 +126,9 @@ const Homepage = () => {
               <div className="flex justify-center items-center mb-[-1em] mt-[-.7em] gap-2">
                 <h1 className="font-bold">BUILD</h1>
                 <FaBuilding className="text-[#fe5d14]" />
+              </div>
+               <div>
+                <img className="rounded" src={construct2} alt="dream img.." />
               </div>
               <p className="para font-semibold text-gray-300">
                 Don't just build to own. Build with value, quality, and
