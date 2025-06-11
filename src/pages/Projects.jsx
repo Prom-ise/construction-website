@@ -34,55 +34,76 @@ const Projects = () => {
       </div>
 
       {/* Projects Grid */}
-      <div className="projects-container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10 px-4">
-        {loading ? (
-          <div className="col-span-full flex flex-col items-center justify-center py-16">
-            <svg className="animate-spin h-8 w-8 text-blue-600 mb-2" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
-            </svg>
-            <span className="text-blue-600 font-semibold text-lg">Projects loading...</span>
-          </div>
-        ) : projects.length === 0 ? (
-          <div className="col-span-full text-center font-bold text-gray-500 text-lg py-10">
-            No Projects available at the moment.
-          </div>
-        ) : (
-          projects.map((project) => (
-           <div
-  className="bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-xl transition duration-300 flex flex-col overflow-hidden"
-  key={project._id}
->
-  <div className="w-full h-56 overflow-hidden">
-    <img
-      src={project.image}
-      alt={project.title}
-      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-    />
-  </div>
-
-  <div className="p-5 flex flex-col gap-2 text-center">
-    <h3 className="text-xl font-bold text-gray-800 dark:text-white">{project.title}</h3>
-    <span className="text-sm text-[#fe5d14] font-medium tracking-wide uppercase">
-      {project.category}
-    </span>
-    <p className="text-gray-600 dark:text-gray-300 text-sm">{project.description}</p>
-    <p
-      className={`text-sm font-semibold mt-2 ${
-        project.status.toLowerCase() === 'completed'
-          ? 'text-green-600'
-          : project.status.toLowerCase() === 'in progress'
-          ? 'text-yellow-600'
-          : 'text-red-600'
-      } capitalize`}
-    >
-      {project.status}
-    </p>
-  </div>
-</div>
-          ))
-        )}
+    <div className="projects-container lg:mx-[3em] xl:mx-[3em] grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 sm:gap-8 my-10 px-2 sm:px-4">
+  {loading ? (
+    // Show 3 shimmer cards for loading state
+    Array.from({ length: 3 }).map((_, idx) => (
+      <div
+        key={idx}
+        className="bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-xl transition duration-300 flex flex-col overflow-hidden"
+      >
+        <div className="w-full h-56 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gray-300 animate-pulse" />
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 opacity-60 animate-[shimmer_1.5s_infinite_linear]"
+            style={{ backgroundSize: "200% 100%" }}
+          />
+          <style>
+            {`
+              @keyframes shimmer {
+                0% { background-position: -200% 0; }
+                100% { background-position: 200% 0; }
+              }
+            `}
+          </style>
+        </div>
+        <div className="p-5 flex flex-col gap-2 text-center">
+          <div className="h-6 bg-gray-200 rounded w-2/3 mx-auto mb-2 animate-pulse"></div>
+          <div className="h-4 bg-gray-100 rounded w-1/3 mx-auto mb-2 animate-pulse"></div>
+          <div className="h-4 bg-gray-100 rounded w-3/4 mx-auto mb-2 animate-pulse"></div>
+          <div className="h-4 bg-gray-100 rounded w-1/4 mx-auto animate-pulse"></div>
+        </div>
       </div>
+    ))
+  ) : projects.length === 0 ? (
+    <div className="col-span-full text-center font-bold text-gray-500 text-lg py-10">
+      No Projects available at the moment.
+    </div>
+  ) : (
+    projects.map((project) => (
+      <div
+        className="bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-xl transition duration-300 flex flex-col overflow-hidden"
+        key={project._id}
+      >
+        <div className="w-full h-56 overflow-hidden">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+        <div className="p-5 flex flex-col gap-2 text-center">
+          <h3 className="text-xl font-bold text-gray-800 dark:text-white">{project.title}</h3>
+          <span className="text-sm text-[#fe5d14] font-medium tracking-wide uppercase">
+            {project.category}
+          </span>
+          <p className="text-gray-600 dark:text-gray-300 text-sm">{project.description}</p>
+          <p
+            className={`text-sm font-semibold mt-2 ${
+              project.status.toLowerCase() === "completed"
+                ? "text-green-600"
+                : project.status.toLowerCase() === "in progress"
+                ? "text-yellow-600"
+                : "text-red-600"
+            } capitalize`}
+          >
+            {project.status}
+          </p>
+        </div>
+      </div>
+    ))
+  )}
+</div>
 
       {/* Call to Action Section */}
       <div className="relative px-4 md:p-[3em] w-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${construct3})` }}>
