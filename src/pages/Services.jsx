@@ -10,7 +10,7 @@ import { FaBriefcase } from "react-icons/fa";
 const Services = () => {
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <div
         className=" w-full bg-cover py-[5em] px-2 md:p-[4em] bg-center bg-no-repeat relative"
         style={{ backgroundImage: `url(${construct7})` }}
@@ -24,19 +24,34 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="container mx-auto ms-4 my-[10em]">
-        <h1 className="text-2xl font-bold text-black ">
+      <div className="max-w-4xl w-full mx-auto px-4 sm:px-6 md:px-8 my-16">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-2">
           Our Featured Services
         </h1>
-        <h2 className="text-xl text-[rgb(254,93,20)]">
+        <h2 className="text-lg sm:text-xl md:text-2xl text-[rgb(254,93,20)] mb-4">
           Start booking now for any of your wanted service below
         </h2>
-        <p className="text-black my-[1em]">
-          Services are not completed when they do not serve their purpose, yes! In fact, even the best plans can fall short if not executed by trusted and proven professionals. Correct. Services without the right expertise, dedication, and reliability are also not truly completed—they may leave you with unfinished work, wasted resources, or unmet expectations. What's the solution? Choose a team with a track record of excellence and integrity to ensure your project is completed to the highest standard, from start to finish.
+        <p className="text-black my-4 text-base sm:text-lg leading-relaxed">
+          Services are not completed when they do not serve their purpose, yes!
+          In fact, even the best plans can fall short if not executed by trusted
+          and proven professionals. Correct. Services without the right
+          expertise, dedication, and reliability are also not truly
+          completed—they may leave you with unfinished work, wasted resources,
+          or unmet expectations. What's the solution? Choose a team with a track
+          record of excellence and integrity to ensure your project is completed
+          to the highest standard, from start to finish.
         </p>
-
-        <p className="text-black">
-         Bumia Construction Company offers you comprehensive solutions for your building and construction needs—from initial planning and groundbreaking to project takeover, completion, and final handover. We specialize in managing every stage of your project, ensuring quality, transparency, and timely delivery. Whether you're starting from scratch or need experts to complete an ongoing project, our experienced team is ready to help you achieve your goals. Explore the services listed below and click to book the one that best fits your needs. Let us bring your vision to life with professionalism and excellence!
+        <p className="text-black text-base sm:text-lg leading-relaxed">
+          Bumia Construction Company offers you comprehensive solutions for your
+          building and construction needs—from initial planning and
+          groundbreaking to project takeover, completion, and final handover. We
+          specialize in managing every stage of your project, ensuring quality,
+          transparency, and timely delivery. Whether you're starting from
+          scratch or need experts to complete an ongoing project, our
+          experienced team is ready to help you achieve your goals. Explore the
+          services listed below and click to book the one that best fits your
+          needs. Let us bring your vision to life with professionalism and
+          excellence!
         </p>
       </div>
 
