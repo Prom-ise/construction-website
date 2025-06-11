@@ -251,52 +251,51 @@ const ProjectUploadForm = () => {
               className="bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-xl transition duration-300 flex flex-col overflow-hidden"
               key={project._id}
             >
-               <div className="w-full h-56 overflow-hidden">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-          />
-        </div>
-        <div className="p-5 flex flex-col gap-2 text-center">
-           <div className="category text-white">{project.title}</div>
-              <div className="heading text-[#fe5d14]">{project.category}</div>
-              <p className="text-white text-center">{project.description}</p>
-              <div className="flex justify-between mt-2">
-                <button
-                  onClick={() => handleDelete(project._id)}
-                  className="bg-red-500 text-white px-3 py-1 rounded"
-                >
-                  Delete
-                </button>
-                <button
-                  onClick={() =>
-                    handleToggleStatus(project._id, project.status)
-                  }
-                  className={`px-3 py-1 rounded ${
-                    project.status === "completed"
-                      ? "bg-green-600"
-                      : "bg-yellow-500"
-                  } text-white`}
-                >
-                  Mark as{" "}
-                  {project.status === "completed" ? "Ongoing" : "Completed"}
-                </button>
+              <div className="w-full h-56 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
               </div>
-              <div className="mt-1 text-center">
-                <span
-                  className={
-                    project.status === "completed"
-                      ? "text-green-600"
-                      : "text-yellow-600"
-                  }
-                >
-                  {project.status.charAt(0).toUpperCase() +
-                    project.status.slice(1)}
-                </span>
+              <div className="p-5 flex flex-col gap-2 text-center">
+                <div className="category text-white">{project.title}</div>
+                <div className="heading text-[#fe5d14]">{project.category}</div>
+                <p className="text-white text-center">{project.description}</p>
+                <div className="flex justify-between mt-2">
+                  <button
+                    onClick={() => handleDelete(project._id)}
+                    className="bg-red-500 text-white px-3 py-1 rounded"
+                  >
+                    Delete
+                  </button>
+                  <button
+                    onClick={() =>
+                      handleToggleStatus(project._id, project.status)
+                    }
+                    className={`px-3 py-1 rounded ${
+                      project.status === "completed"
+                        ? "bg-green-600"
+                        : "bg-yellow-500"
+                    } text-white`}
+                  >
+                    Mark as{" "}
+                    {project.status === "completed" ? "Ongoing" : "Completed"}
+                  </button>
+                </div>
+                <div className="mt-1 text-center">
+                  <span
+                    className={
+                      project.status === "completed"
+                        ? "text-green-600"
+                        : "text-yellow-600"
+                    }
+                  >
+                    {project.status.charAt(0).toUpperCase() +
+                      project.status.slice(1)}
+                  </span>
+                </div>
               </div>
-        </div>
-             
             </div>
           ))
         )}
