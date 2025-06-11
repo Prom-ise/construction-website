@@ -240,7 +240,7 @@ const ProjectUploadForm = () => {
         Project Uploads
       </div>
 
-      <div className="projects-container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
+      <div className="projects-container lg:mx-[3em] xl:mx-[3em] grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 sm:gap-8 my-10 px-2 sm:px-4">
         {projects.length === 0 ? (
           <div className="col-span-full text-center text-gray-500 text-lg py-10">
             No project upload yet.
