@@ -248,17 +248,18 @@ const ProjectUploadForm = () => {
         ) : (
           projects.map((project) => (
             <div
-              className="cards3 bg-white rounded shadow flex flex-col"
+              className="bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-xl transition duration-300 flex flex-col overflow-hidden"
               key={project._id}
             >
-              <div className="card3-image">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-56 object-cover rounded-t"
-                />
-              </div>
-              <div className="category">{project.title}</div>
+               <div className="w-full h-56 overflow-hidden">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+        <div className="p-5 flex flex-col gap-2 text-center">
+           <div className="category">{project.title}</div>
               <div className="heading">{project.category}</div>
               <p className="text-black text-center">{project.description}</p>
               <div className="flex justify-between mt-2">
@@ -294,6 +295,8 @@ const ProjectUploadForm = () => {
                     project.status.slice(1)}
                 </span>
               </div>
+        </div>
+             
             </div>
           ))
         )}
