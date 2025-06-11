@@ -259,9 +259,9 @@ const ProjectUploadForm = () => {
           />
         </div>
         <div className="p-5 flex flex-col gap-2 text-center">
-           <div className="category">{project.title}</div>
+           <div className="category text-white">{project.title}</div>
               <div className="heading text-[#fe5d14]">{project.category}</div>
-              <p className="text-black text-center">{project.description}</p>
+              <p className="text-white text-center">{project.description}</p>
               <div className="flex justify-between mt-2">
                 <button
                   onClick={() => handleDelete(project._id)}
