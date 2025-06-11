@@ -14,7 +14,7 @@ const AdminSidebar = () => {
   };
 
   const SidebarContent = (
-    <nav className="flex flex-col p-4 gap-4 h-full">
+    <nav className="flex flex-col p-4 gap-4 h-full overflow-hidden">
       <NavLink
         to="/admin/dashboard"
         className={({ isActive }) =>
