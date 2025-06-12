@@ -62,7 +62,7 @@ const Contact = () => {
     </div>
 
     {/* Form Section */}
-    <form className="container mx-auto px-4 md:px-[4em] my-10 md:my-[7em]" onSubmit={handleSubmit}>
+    <form className="max-w-6xl container mx-auto px-4 md:px-[4em] my-10 md:my-[7em]" onSubmit={handleSubmit}>
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-x-4">
         <div className="w-full md:w-6/12">
           <label htmlFor="name" className="block text-black mb-1">NAME</label>

@@ -56,10 +56,10 @@ const Services = () => {
       </div>
 
       <div className="mx-auto">
-        <h1 className="text-3xl mt-[2em] font-bold text-center text-[rgb(254,93,20)]">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[rgb(254,93,20)]">
           Services available for instant booking
         </h1>
-        <div className="mt-[3em] mb-[8em]">
+        <div className="max-w-6xl w-full mx-auto px-4 sm:px-6 md:px-8 my-16 mt-[3em] mb-[8em]">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4">
             <div className="service-card w-full">
               <div className="service-content">
@@ -637,7 +637,7 @@ const Services = () => {
                     <div className="service-icon">
                       <GiHouse />
                     </div>
-                    <strong>Warehouses, Pens, and farmhouses</strong>
+                    <strong className="text-center">Warehouses, Pens, and farmhouses</strong>
                   </div>
                 </div>
 

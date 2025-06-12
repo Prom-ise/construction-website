@@ -34,10 +34,10 @@ const Projects = () => {
       </div>
 
       {/* Projects Grid */}
-    <div className="projects-container lg:mx-[3em] xl:mx-[3em] grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 sm:gap-8 my-10 px-2 sm:px-4">
+    <div className="max-w-6xl w-full mx-auto projects-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 my-10 px-4">
   {loading ? (
     // Show 3 shimmer cards for loading state
-    Array.from({ length: 3 }).map((_, idx) => (
+    Array.from({ length: 6 }).map((_, idx) => (
       <div
         key={idx}
         className="bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-xl transition duration-300 flex flex-col overflow-hidden"

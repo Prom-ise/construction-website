@@ -26,7 +26,7 @@ const Homepage = () => {
           style={{ backgroundImage: `url(${heroImages[currentIndex]})` }}></div>
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <div className="relative z-20 flex flex-col md:flex-row w-full h-full items-center justify-between p-8 text-white">
-          <div className="mt-[4em] w-full md:w-6/12">
+          <div className="max-w-6xl mx-auto mt-[4em] w-full md:w-6/12">
             <p className="text-[rgb(254,93,20)] font-bold text-lg md:text-xl mb-2">
               Bumia co lmt - Construction Company
             </p>
@@ -68,10 +68,10 @@ const Homepage = () => {
 
       {/* Cards Section */}
       <div className="my-10 md:my-[5em]">
-        <h1 className="text-center text-3xl mb-[1.5em] font-bold text-[#fe5d14]">
+        <h1 className="text-center text-2xl sm:text-3xl md:text-4xl mb-[1.5em] font-bold text-[#fe5d14]">
           Road to Ownership
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4">
+        <div className="max-w-6xl w-full mx-auto projects-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 my-10 px-4">
           <div className="card w-full mx-auto">
             <div className="content">
               <div className="flex justify-center items-center mb-[-1em] mt-[-.7em] gap-2">
