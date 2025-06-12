@@ -4,6 +4,10 @@ import Faq from "../components/Faq.jsx";
 import construct1 from "../assets/construct1.jpg";
 import construct2 from "../assets/construct2.jpg";
 import construct3 from "../assets/construct3.jpg";
+import think1 from "../assets/think1.jpg";
+import dream1 from "../assets/dream1.jpg";
+import plan1 from "../assets/Plan1.jpg";
+import build1 from "../assets/build1.jpg";
 import { MdRealEstateAgent, MdOutlineNextPlan } from "react-icons/md";
 import { FaThinkPeaks, FaBuilding } from "react-icons/fa";
 
@@ -79,7 +83,7 @@ const Homepage = () => {
                 <MdRealEstateAgent className="text-[#fe5d14]" />
               </div>
               <div>
-                <img className="rounded" src={construct2} alt="dream img.." />
+                <img className="rounded" src={dream1} alt="dream img.." />
               </div>
               <p className="para font-semibold text-gray-300">
                 Did you ever want to own a property? Every real property began
@@ -95,7 +99,7 @@ const Homepage = () => {
                 <FaThinkPeaks className="text-[#fe5d14]" />
               </div>
                <div>
-                <img className="rounded" src={construct2} alt="dream img.." />
+                <img className="rounded" src={think1} alt="dream img.." />
               </div>
               <p className="para font-semibold text-gray-300">
                 Ownership comes with decision-making. Take a seat—how do you
@@ -111,7 +115,7 @@ const Homepage = () => {
                 <MdOutlineNextPlan className="text-[#fe5d14]" />
               </div>
                <div>
-                <img className="rounded" src={construct2} alt="dream img.." />
+                <img className="rounded" src={plan1} alt="dream img.." />
               </div>
               <p className="para font-semibold text-gray-300">
                 From putting the structure on paper to placing the bricks one
@@ -128,7 +132,7 @@ const Homepage = () => {
                 <FaBuilding className="text-[#fe5d14]" />
               </div>
                <div>
-                <img className="rounded" src={construct2} alt="dream img.." />
+                <img className="rounded" src={build1} alt="dream img.." />
               </div>
               <p className="para font-semibold text-gray-300">
                 Don't just build to own. Build with value, quality, and
