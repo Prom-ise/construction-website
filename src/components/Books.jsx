@@ -23,7 +23,7 @@ const Book = () => {
   const [status, setStatus] = useState("");
 
   const [formData, setFormData] = useState({
-    name: "",
+    clientName: "",
     email: "",
     phone: "",
     message: "",
@@ -94,7 +94,7 @@ const Book = () => {
       <h2 className="text-xl font-bold mb-4">Book: {projectType}</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
-          name="name"
+          name="clientName"
           required
           onChange={handleChange}
           placeholder="Your Name"
