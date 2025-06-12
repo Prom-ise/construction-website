@@ -47,17 +47,18 @@ const Bookings = () => {
     setFiltered(result);
   }, [searchService, dateFrom, dateTo, bookings]);
 
-const handleComplete = async (id, currentStatus) => {
-  const newStatus = currentStatus === 'completed' ? 'pending' : 'completed';
+const handleComplete = async (id) => {
   if (!window.confirm("Are you sure?")) return;
 
   try {
     await axios.patch(
       `https://construct-backend.onrender.com/api/bookings/${id}/complete`,
-      { status: newStatus },
-      {  headers: {
-            Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
-          }, }
+      {}, // No need to send status, backend sets it
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
+        },
+      }
     );
     alert("Marked as completed.");
     fetchBookings();
