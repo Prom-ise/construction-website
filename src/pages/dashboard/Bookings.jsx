@@ -108,7 +108,7 @@ const handleComplete = async (id) => {
         <div className="space-y-4">
           {filtered.map((b) => (
             <div key={b._id} className="bg-white p-4 rounded shadow border">
-              <p><strong>Name:</strong> {b.name}</p>
+              <p><strong>Name:</strong> {b.clientName}</p>
               <p><strong>Email:</strong> {b.email}</p>
               <p><strong>Service:</strong> {b.service}</p>
               <p><strong>Date:</strong> {new Date(b.date).toLocaleString()}</p>
