@@ -145,7 +145,8 @@ const Homepage = () => {
       </div>
 
       {/* Building with Intention Section */}
-      <div className="flex flex-col md:flex-row bg-white px-4 md:px-[2em] py-10 md:py-[5em] gap-8">
+      <div className="bg-white">
+         <div className="max-w-6xl mx-auto flex flex-col md:flex-row px-4 md:px-[2em] py-10 md:py-[5em] gap-8">
         <div className="w-full md:w-6/12 mb-6 md:mb-0 flex flex-col justify-center">
           <h1 className="text-2xl md:text-3xl text-[rgb(254,93,20)] font-bold">
             Building with Intention
@@ -160,9 +161,9 @@ const Homepage = () => {
             handled with precision, creativity, and care.
           </p>
           <p className="text-black mt-4">
-            Whether you’re dreaming of a new home, a commercial space, or a
+            Whether you're dreaming of a new home, a commercial space, or a
             community development, we turn your vision into reality with quality
-            craftsmanship and innovative solutions. At Bumia, we don’t just
+            craftsmanship and innovative solutions. At Bumia, we don't just
             build structures—we build trust, comfort, and lasting value for
             every client.
           </p>
@@ -177,6 +178,7 @@ const Homepage = () => {
             className="rounded-lg max-h-80 w-full object-cover"
           />
         </div>
+      </div>
       </div>
 
       {/* Call to Action Section */}
