@@ -280,11 +280,11 @@ const ProjectUploadForm = () => {
               <div className="p-5 flex flex-col gap-2 text-center">
                 <div className="category text-white">{project.title}</div>
                 <div className="heading text-[#fe5d14]">{project.category}</div>
-                <p className="text-white text-center">{project.description}</p>
+                <p className="text-center text-gray-600 dark:text-gray-300 text-sm">{project.description}</p>
                 <div className="flex justify-between mt-2">
                   <button
                     onClick={() => handleDelete(project._id)}
-                    className="bg-red-500 text-white px-3 py-1 rounded"
+                    className="bg-red-500 text-sm text-white px-3 py-1 rounded"
                   >
                     Delete
                   </button>
@@ -292,7 +292,7 @@ const ProjectUploadForm = () => {
                     onClick={() =>
                       handleToggleStatus(project._id, project.status)
                     }
-                    className={`px-3 py-1 rounded ${
+                    className={`px-3 py-1 text-sm rounded ${
                       project.status === "completed"
                         ? "bg-green-600"
                         : "bg-yellow-500"
