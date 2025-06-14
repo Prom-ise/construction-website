@@ -284,7 +284,7 @@ const ProjectUploadForm = () => {
                 <div className="flex justify-between mt-2">
                   <button
                     onClick={() => handleDelete(project._id)}
-                    className="bg-red-500 text-sm text-white px-3 py-1 rounded"
+                    className="bg-red-500 !text-sm text-white px-3 py-1 rounded"
                   >
                     Delete
                   </button>
@@ -292,7 +292,7 @@ const ProjectUploadForm = () => {
                     onClick={() =>
                       handleToggleStatus(project._id, project.status)
                     }
-                    className={`px-3 py-1 text-sm rounded ${
+                    className={`px-3 py-1 !text-sm rounded ${
                       project.status === "completed"
                         ? "bg-green-600"
                         : "bg-yellow-500"
