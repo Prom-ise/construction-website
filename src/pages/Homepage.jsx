@@ -4,7 +4,7 @@ import Faq from "../components/Faq.jsx";
 import construct1 from "../assets/construct1.jpg";
 import construct2 from "../assets/construct2.jpg";
 import construct3 from "../assets/construct3.jpg";
-import think1 from "../assets/think1.jpg";
+import think1 from "../assets/think1.png";
 import dream1 from "../assets/dream1.jpg";
 import plan1 from "../assets/Plan1.jpg";
 import build1 from "../assets/build1.jpg";
