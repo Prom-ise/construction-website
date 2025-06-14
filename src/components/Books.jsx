@@ -66,6 +66,16 @@ const Book = () => {
 
       if (res.ok) {
         setStatus("success");
+        setFormData({
+        clientName: "",
+        email: "",
+        phone: "",
+        message: "",
+        projectType,
+        date: new Date().toISOString().split("T")[0],
+        service: projectType,
+      });
+      setUserAnswer("");
       } else {
         setStatus("error");
       }
