@@ -37,6 +37,22 @@ const ProjectUploadForm = () => {
     fetchProjects();
   }, []);
 
+  // Clear error after 10 seconds
+  useEffect(() => {
+    if (error) {
+      const timer = setTimeout(() => setError(""), 10000);
+      return () => clearTimeout(timer);
+    }
+  }, [error]);
+
+  // Clear success after 10 seconds
+  useEffect(() => {
+    if (success) {
+      const timer = setTimeout(() => setSuccess(""), 10000);
+      return () => clearTimeout(timer);
+    }
+  }, [success]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
