@@ -34,6 +34,9 @@ const ProjectUploadForm = () => {
   };
 
   useEffect(() => {
+    // Reset messages on mount
+    setError("");
+    setSuccess("");
     fetchProjects();
   }, []);
 
